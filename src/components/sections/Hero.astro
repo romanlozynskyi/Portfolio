@@ -57,7 +57,12 @@ const homeContact = lang === 'en' ? '/en/#contact' : '/#contact';
       <div
         class:list={['reveal mt-9 flex flex-col gap-3 sm:flex-row', !photo ? 'justify-center' : 'sm:items-center']}
       >
-        <a href={homeContact} class="btn btn-primary px-8 py-4 text-lg">
+        <a
+          href={homeContact}
+          class="btn btn-primary px-8 py-4 text-lg"
+          data-analytics-event="discuss_site"
+          data-analytics-location="hero"
+        >
           {dict.hero.cta}
           <span aria-hidden="true" class="btn-arrow">→</span>
         </a>

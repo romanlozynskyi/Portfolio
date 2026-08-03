@@ -4,6 +4,7 @@ import { SITE_URL } from '../site.config.mjs';
 import { altPath, type Lang } from '../i18n';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Analytics from '@vercel/analytics/astro';
 
 interface Props {
   lang: Lang;
@@ -58,6 +59,7 @@ const skipLabel = lang === 'en' ? 'Skip to content' : 'Перейти до вм�
     </script>
     <!-- Аналітика (Cloudflare Web Analytics): після деплою вставте свій token і розкоментуйте -->
     <!-- <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "YOUR_TOKEN"}'></script> -->
+    <Analytics />
   </head>
   <body class="min-h-screen">
     <a
@@ -77,6 +79,17 @@ const skipLabel = lang === 'en' ? 'Skip to content' : 'Перейти до вм�
     </main>
     <Footer lang={lang} />
     <script>
+      // Кліки по кнопках/посиланнях з data-analytics-event шлемо у Vercel Analytics один раз на клік
+      import { track } from '@vercel/analytics';
+      document.addEventListener('click', (e) => {
+        const target = (e.target as HTMLElement)?.closest<HTMLElement>('[data-analytics-event]');
+        if (!target) return;
+        const name = target.dataset.analyticsEvent;
+        if (!name) return;
+        const { analyticsEvent, ...rest } = target.dataset;
+        track(name, Object.keys(rest).length ? (rest as Record<string, string>) : undefined);
+      });
+
       // Стагер: елементам .reveal у контейнері [data-stagger] задаємо наростаючу затримку
       document.querySelectorAll('[data-stagger]').forEach((group) => {
         const el = group as HTMLElement;

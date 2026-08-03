@@ -74,7 +74,11 @@ const homeContact = lang === 'en' ? '/en/#contact' : '/#contact';
           </div>
 
           <div class="mt-9">
-            <a href={homeContact} class="btn btn-primary w-full px-8 py-4 sm:w-auto">
+            <a
+              href={homeContact}
+              class="btn btn-primary w-full px-8 py-4 sm:w-auto"
+              data-analytics-event="order_site"
+            >
               {dict.offer.cta}
               <span aria-hidden="true" class="btn-arrow">→</span>
             </a>

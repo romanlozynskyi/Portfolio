@@ -13,9 +13,9 @@ const inputClass =
 
 // Показуємо лише ті месенджери, для яких заповнене посилання в site.config.mjs.
 const messengers = [
-  { label: 'Telegram', href: SITE.telegram },
-  { label: 'WhatsApp', href: SITE.whatsapp },
-  { label: 'Viber', href: SITE.viber },
+  { label: 'Telegram', href: SITE.telegram, event: 'telegram' },
+  { label: 'WhatsApp', href: SITE.whatsapp, event: 'whatsapp' },
+  { label: 'Viber', href: SITE.viber, event: 'viber' },
 ].filter((m) => m.href);
 ---
 
@@ -46,6 +46,8 @@ const messengers = [
               <a
                 href={m.href}
                 class="inline-flex items-center gap-2 rounded-full border border-white/25 px-6 py-3 font-medium text-white transition-colors hover:border-white/50 hover:bg-white/10"
+                data-analytics-event={m.event}
+                data-analytics-location="contact_section"
               >
                 {m.label}
               </a>
@@ -92,6 +94,8 @@ const messengers = [
 </section>
 
 <script>
+  import { track } from '@vercel/analytics';
+
   const form = document.querySelector<HTMLFormElement>('#contact-form');
   if (form) {
     const button = form.querySelector<HTMLButtonElement>('button[type="submit"]');
@@ -131,6 +135,7 @@ const messengers = [
         if (res.ok && result.ok) {
           form.reset();
           showStatus(successMessage, 'success');
+          track('contact_form_submit');
         } else {
           showStatus(errorMessage, 'error');
         }

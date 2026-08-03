@@ -53,7 +53,13 @@ const ariaLabel = `${dict.cases.open}: ${data.business.name}`;
             <span class="transition-transform group-hover:translate-x-0.5">→</span>
           </span>
         </div>
-        <a href={href} class={coverLink} aria-label={ariaLabel} />
+        <a
+          href={href}
+          class={coverLink}
+          aria-label={ariaLabel}
+          data-analytics-event="portfolio_case"
+          data-case={entry.id}
+        />
       </article>
 
       {/* Tablet + desktop: велика картка, контент притиснутий до правого краю */}
@@ -80,7 +86,13 @@ const ariaLabel = `${dict.cases.open}: ${data.business.name}`;
             </span>
           </div>
         </div>
-        <a href={href} class={coverLink} aria-label={ariaLabel} />
+        <a
+          href={href}
+          class={coverLink}
+          aria-label={ariaLabel}
+          data-analytics-event="portfolio_case"
+          data-case={entry.id}
+        />
       </article>
     </Fragment>
   ) : (
