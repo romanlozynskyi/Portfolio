@@ -23,6 +23,33 @@ Many lead generation tools stop after discovery. They may return companies, prof
 
 AI Lead Scout moves those checks into the research pipeline.
 
+## Architecture
+
+```mermaid
+flowchart LR
+    A[Campaign requirements] --> B[Campaign orchestrator]
+    B --> C[Source router]
+    C --> D1[Official APIs]
+    C --> D2[Direct HTTP]
+    C --> D3[Playwright]
+    C --> D4[Exa]
+    C --> D5[Apify]
+    D1 --> E[Candidate pool]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+    E --> F[Company verification]
+    F --> G[Decision-maker research]
+    G --> H[Identity verification]
+    H --> I[Contact enrichment]
+    I --> J[Evidence scoring]
+    J --> K[Deduplication]
+    K --> L{Target reached?}
+    L -- No --> C
+    L -- Yes --> M[Qualified contactable leads]
+```
+
 ## System design
 
 The agent is structured around a campaign orchestrator and source-specific adapters.
