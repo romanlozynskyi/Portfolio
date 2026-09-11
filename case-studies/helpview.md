@@ -10,6 +10,21 @@ Helpview turns Notion content into a structured, searchable customer help center
 
 The product connects one content source to multiple support surfaces such as a help center, documentation, and an embedded help widget.
 
+## Product flow
+
+```mermaid
+flowchart LR
+    A[Notion workspace] --> B[Content sync]
+    B --> C[Helpview content model]
+    C --> D[Searchable help center]
+    C --> E[Embedded help widget]
+    C --> F[Custom domain publishing]
+    D --> G[Search analytics]
+    E --> G
+    G --> H[Content gap insights]
+    H --> A
+```
+
 ## Product capabilities
 
 - Connect a Notion workspace
@@ -23,7 +38,7 @@ The product connects one content source to multiple support surfaces such as a h
 - Search insights and analytics
 - Visibility into zero-result searches and content gaps
 
-## Product flow
+## Workflow
 
 1. Connect the Notion workspace.
 2. Select and organize help content.
