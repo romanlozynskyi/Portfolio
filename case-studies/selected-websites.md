@@ -11,11 +11,15 @@ The work covers positioning, responsive interfaces, trust signals, booking flows
 
 ## KVARC Detailing
 
+![KVARC Detailing](../src/content/cases/kvarc-detailing-kyiv/cover.jpg)
+
 **Live:** https://kvarc-detailing.vercel.app/
 
 A detailing website built around price clarity and service comparison. The experience includes package explanation, a price calculator, a before/after interaction, warranty messaging, and a fast booking path.
 
 ## Emal Dental
+
+![Emal Dental](../src/content/cases/emal-dental-kyiv/cover.jpg)
 
 **Live:** https://emal-dental-ten.vercel.app/
 
@@ -23,17 +27,23 @@ A dental clinic website designed to reduce uncertainty before booking. It surfac
 
 ## MALVA Beauty
 
+![MALVA Beauty](../src/content/cases/malva-beauty-kyiv/cover.jpg)
+
 **Live:** https://malva-beauty-studio.vercel.app/
 
 A beauty studio website that brings services, prices, duration, specialist profiles, studio photos, and booking into one place so users do not need to collect information through direct messages.
 
 ## RIVNO Renovation
 
+![RIVNO Renovation](../src/content/cases/rivno-renovation-kyiv/cover.jpg)
+
 **Live:** https://rivno-renovation.vercel.app/
 
 A renovation company website focused on reducing trust barriers. It includes estimate logic, staged payment explanation, responsibility terms, comparison content, and a survey request flow.
 
 ## POPIL Restaurant
+
+![POPIL Restaurant](../src/content/cases/popil-restaurant-kyiv/cover.jpg)
 
 **Live:** https://popil-restaurant.vercel.app/
 
