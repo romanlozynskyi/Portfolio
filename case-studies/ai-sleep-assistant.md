@@ -53,6 +53,8 @@ The work included aligning subscription flows so payment status updated consiste
 
 The application was deployed live after end-to-end testing. The client later confirmed that the live app, Bubble setup, and Stripe flow were working well and left a 5-star review.
 
+![Client review](../assets/ai-sleep-assistant/client-review.jpg)
+
 ## What this case demonstrates
 
 - AI product integration
