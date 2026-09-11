@@ -11,6 +11,8 @@ AstuteWheel is a mature financial planning SaaS and CRM platform used by more th
 
 My work has gone beyond the UI layer and covers system and database architecture, backend workflows, CRM operations, reporting, integrations, automation, performance optimization, and the ongoing evolution of a large production product.
 
+![AstuteWheel product overview](../assets/astutewheel/product-overview.jpg)
+
 ## Areas of responsibility
 
 - SaaS and CRM architecture
