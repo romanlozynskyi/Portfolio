@@ -10,6 +10,8 @@ Loomenio is an operations platform for small-batch manufacturers. It brings inve
 
 The product is built around a simple idea: the application should help a maker understand what needs attention next without handing critical business logic to an LLM.
 
+![Loomenio Today](../assets/loomenio/today.jpg)
+
 ## My role
 
 I designed and built the product architecture, data model, permissions, inventory and production logic, AI-assisted workflows, integrations, analytics foundations, and responsive application experience.
@@ -124,4 +126,4 @@ The central design principle is controlled AI:
 
 ## Public portfolio note
 
-The production repository is private. This case study intentionally shows product architecture, workflows, and engineering decisions without exposing proprietary source code or customer data.
+The production repository is private. This case study intentionally shows product architecture, workflows, screenshots, and engineering decisions without exposing proprietary source code or customer data.
