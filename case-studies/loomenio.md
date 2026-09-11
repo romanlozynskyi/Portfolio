@@ -14,6 +14,26 @@ The product is built around a simple idea: the application should help a maker u
 
 I designed and built the product architecture, data model, permissions, inventory and production logic, AI-assisted workflows, integrations, analytics foundations, and responsive application experience.
 
+## Product architecture
+
+```mermaid
+flowchart TB
+    U[Workspace user] --> W[Next.js application]
+    W --> A[Application services]
+    A --> S[(Supabase / PostgreSQL)]
+    S --> R[RLS workspace isolation]
+    A --> I[Inventory transactions]
+    A --> P[Production and recipes]
+    A --> O[Orders and suppliers]
+    A --> X[External integrations]
+    A --> N[Notifications]
+    A --> T[Today recommendations]
+    A --> C[AI Capture]
+    C --> V[Structured draft + validation]
+    V --> Q[User confirmation]
+    Q --> A
+```
+
 ## Core product areas
 
 - Materials and SKU management
@@ -43,6 +63,20 @@ Database security and workspace isolation are enforced with row-level security. 
 ## AI Capture
 
 AI Capture converts messy user input into structured operational drafts that can be reviewed before being applied.
+
+```mermaid
+flowchart LR
+    A[Messy user input] --> B[AI interpretation]
+    B --> C[Operation draft]
+    C --> D[Entity and unit resolution]
+    D --> E{Clear and valid?}
+    E -- No --> F[Needs review]
+    E -- Yes --> G[Structured proposal]
+    F --> G
+    G --> H[User confirmation]
+    H --> I[Deterministic application logic]
+    I --> J[(Database transaction)]
+```
 
 The workflow includes:
 
