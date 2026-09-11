@@ -1,50 +1,45 @@
-# Портфоліо-сайт: сторінки, які приводять клієнтів
+# Roman Lozynskyi | Product and Engineering Portfolio
 
-Двомовний сайт (укр. на корені, англ. під `/en/`) на Astro + Tailwind. Статичний, швидкий,
-кейси керуються файлами без коду.
+Selected work across AI agents, SaaS products, automation, production systems, and web interfaces.
 
-## Що заповнити перед запуском (TODO)
+This repository is a public portfolio and case study collection. Production source code for private and commercial products is intentionally not included.
 
-1. **[src/site.config.mjs](src/site.config.mjs)** — прізвище, домен, Telegram, телефон, ціни.
-   Це єдине місце: значення підставляються по всьому сайту в обох мовах.
-2. **Ваше фото** — покладіть файл `src/assets/roman.jpg` (або `.png`/`.webp`) і видаліть
-   `src/assets/roman.svg`. Фото з'явиться в hero та у блоці «Хто я». Без фото сайт теж
-   виглядає нормально — текст сам центрується.
-3. **Кейси** — замініть три зразки в [src/content/cases/](src/content/cases/) на справжні.
-   Як саме — у [src/content/cases/README.md](src/content/cases/README.md).
-4. **robots.txt** — впишіть свій домен у [public/robots.txt](public/robots.txt).
+## Featured Case Studies
 
-## Команди
+| Project | Focus | Links |
+| --- | --- | --- |
+| AI Lead Scout | AI agent, research automation, verification, enrichment | [Case study](./case-studies/ai-lead-scout.md) |
+| Loomenio | AI-first SaaS, inventory, production operations | [Case study](./case-studies/loomenio.md) | [Live](https://app.loomenio.com) |
+| Helpview | Notion help center SaaS, search, publishing, widget | [Case study](./case-studies/helpview.md) | [Live](https://helpview.so/) |
+| AstuteWheel | Production SaaS, CRM, architecture, APIs, automation | [Case study](./case-studies/astutewheel.md) |
+| AI Sleep Assistant | OpenAI, Stripe, subscriptions, embedded widget | [Case study](./case-studies/ai-sleep-assistant.md) | [Live](https://kim-sleep-assistant-62596.bubbleapps.io/) |
+| 168 DAYS | Mobile-first product prototype | [Case study](./case-studies/168-days.md) | [Repository](https://github.com/romanlozynskyi/168-days-mini-app) |
+| Selected Websites | Local business websites and landing experiences | [Case study](./case-studies/selected-websites.md) |
+| Selected Client Systems | Healthcare, contracts, education, marketplace | [Case study](./case-studies/selected-client-systems.md) |
+| Voltt | Product rebuild in progress | [Project note](./case-studies/voltt.md) |
 
-```bash
-npm install       # один раз
-npm run dev       # локальна розробка: http://localhost:4321
-npm run build     # збірка у dist/
-npm run preview   # переглянути збірку
-```
+## How these case studies are presented
 
-## Деплой (Cloudflare Pages, безкоштовно)
+The goal is to show the work without exposing commercial source code. Each case focuses on the product problem, architecture, workflows, technical decisions, delivery, and measurable evidence where available.
 
-1. Запуште репозиторій на GitHub і підключіть його в Cloudflare Pages
-   (Framework preset: Astro; build: `npm run build`; output: `dist`).
-2. У Settings → Environment variables додайте:
-   - `TG_BOT_TOKEN` — токен бота від [@BotFather](https://t.me/BotFather);
-   - `TG_CHAT_ID` — ваш chat id (напишіть щось боту, відкрийте
-     `https://api.telegram.org/bot<ТОКЕН>/getUpdates`, скопіюйте `message.chat.id`).
-3. Прив'яжіть домен. Після цього форма на сайті надсилатиме заявки прямо вам у Telegram
-   (код функції — [functions/api/lead.js](functions/api/lead.js)).
-4. Аналітика: у Cloudflare увімкніть Web Analytics, скопіюйте token у закоментований
-   рядок у [src/layouts/Layout.astro](src/layouts/Layout.astro).
+Private production code, secrets, customer data, proprietary prompts, and sensitive implementation details are excluded.
 
-Локально перевірити форму можна так: `npm run build`, потім
-`npx wrangler pages dev dist` (звичайний `npm run dev` функції не запускає — форма
-відповість 404, це нормально).
+## Public Code
 
-## Як влаштовано
+The [168 DAYS Mini App](https://github.com/romanlozynskyi/168-days-mini-app) is a public frontend prototype built with Next.js, TypeScript, and Tailwind CSS.
 
-- `src/i18n/uk.ts`, `src/i18n/en.ts` — усі тексти інтерфейсу. Англійська — не переклад,
-  а та сама думка природною мовою.
-- `src/content/cases/` — кейси: одна папка = один кейс, обидві мови в одному файлі.
-- `src/components/sections/` — секції головної (hero, кейси, оффер, процес, відгуки, FAQ,
-  контакт).
-- hreflang, canonical, sitemap і перемикач мов працюють автоматично для кожної сторінки.
+The local business website portfolio in this repository is also public and includes five live concepts for different service categories.
+
+## Local Website Portfolio
+
+- [KVARC Detailing](https://kvarc-detailing.vercel.app/)
+- [Emal Dental](https://emal-dental-ten.vercel.app/)
+- [MALVA Beauty](https://malva-beauty-studio.vercel.app/)
+- [RIVNO Renovation](https://rivno-renovation.vercel.app/)
+- [POPIL Restaurant](https://popil-restaurant.vercel.app/)
+
+## About
+
+I work across product architecture, AI workflows, databases, backend logic, integrations, automation, responsive interfaces, and production delivery.
+
+Primary areas: AI agents, SaaS products, internal systems, automation, product rebuilds, and web applications.
