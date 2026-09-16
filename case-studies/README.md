@@ -4,10 +4,13 @@ These case studies document selected product, AI, SaaS, automation, and web work
 
 ## Featured
 
-- [AI Lead Scout](./ai-lead-scout.md)
+Order follows [`../assets/projects.json`](../assets/projects.json), the canonical featured-order registry.
+
 - [Loomenio](./loomenio.md)
-- [Helpview](./helpview.md)
 - [AstuteWheel](./astutewheel.md)
+- [Helpview](./helpview.md)
+- [Nothing Held Back (NHB)](./nhb.md)
+- [AI Lead Scout](./ai-lead-scout.md)
 - [AI Sleep Assistant](./ai-sleep-assistant.md)
 - [168 DAYS Mini App](./168-days.md)
 - [Selected Local Business Websites](./selected-websites.md)

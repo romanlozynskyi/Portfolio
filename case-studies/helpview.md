@@ -10,6 +10,15 @@ Helpview turns Notion content into a structured, searchable customer help center
 
 The product connects one content source to multiple support surfaces such as a help center, documentation, and an embedded help widget.
 
+![Published help center](../assets/helpview/cover/help-center.png)
+
+## Screenshots
+
+![Dashboard and search analytics](../assets/helpview/screenshots/dashboard.png)
+![Publish Notion pages as customer-facing help content](../assets/helpview/screenshots/articles.png)
+![Theme and brand customization](../assets/helpview/screenshots/customization.png)
+![Notion sync settings](../assets/helpview/screenshots/settings-sync.png)
+
 ## Product flow
 
 ```mermaid

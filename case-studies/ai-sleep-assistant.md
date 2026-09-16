@@ -10,6 +10,14 @@ AI Sleep Assistant is a responsive AI chat product built for a sleep consulting 
 
 The product was built from scratch and delivered as a live client application.
 
+![Chat interface](../assets/ai-sleep-assistant/cover/chat.jpg)
+
+## Screenshots
+
+![Mobile-first chat interface](../assets/ai-sleep-assistant/screenshots/mobile-chat.jpg)
+![User signup and login](../assets/ai-sleep-assistant/screenshots/signup.jpg)
+![Subscription screens](../assets/ai-sleep-assistant/screenshots/subscription.jpg)
+
 ## Product scope
 
 - Mobile-first chat interface
@@ -53,7 +61,9 @@ The work included aligning subscription flows so payment status updated consiste
 
 The application was deployed live after end-to-end testing. The client later confirmed that the live app, Bubble setup, and Stripe flow were working well and left a 5-star review.
 
-![Client review](../assets/ai-sleep-assistant/testimonials/client-review.jpg)
+> "Roman was fantastic to work with. He's quick to respond, very professional, and highly skilled. He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant. He communicated clearly throughout, and fixed issues quickly during testing. He delivered high-quality work quickly and stayed responsive throughout. He sent a Loom video that made it easy for me to manage updates going forward. Everything is working so well, and the final result looks great. I would absolutely hire Roman again and highly recommend him."
+
+![Client review](../assets/testimonials/upwork-review-01-full.png)
 
 ## What this case demonstrates
 

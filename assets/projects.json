@@ -1,0 +1,85 @@
+[
+  {
+    "slug": "loomenio",
+    "name": "Loomenio",
+    "caseStudyPath": "case-studies/loomenio.md",
+    "hasAssets": true,
+    "featured": true,
+    "featuredOrder": 1
+  },
+  {
+    "slug": "astutewheel",
+    "name": "AstuteWheel",
+    "caseStudyPath": "case-studies/astutewheel.md",
+    "hasAssets": true,
+    "featured": true,
+    "featuredOrder": 2
+  },
+  {
+    "slug": "helpview",
+    "name": "Helpview",
+    "caseStudyPath": "case-studies/helpview.md",
+    "hasAssets": true,
+    "featured": true,
+    "featuredOrder": 3
+  },
+  {
+    "slug": "nhb",
+    "name": "Nothing Held Back (NHB)",
+    "caseStudyPath": "case-studies/nhb.md",
+    "hasAssets": true,
+    "featured": true,
+    "featuredOrder": 4,
+    "note": "Case study drafted from client-provided screenshots and testimonial only — no live URL or dates beyond what's shown/stated were available."
+  },
+  {
+    "slug": "ai-sleep-assistant",
+    "name": "AI Sleep Assistant",
+    "caseStudyPath": "case-studies/ai-sleep-assistant.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null
+  },
+  {
+    "slug": "ai-lead-scout",
+    "name": "AI Lead Scout",
+    "caseStudyPath": "case-studies/ai-lead-scout.md",
+    "hasAssets": false,
+    "featured": false,
+    "featuredOrder": null
+  },
+  {
+    "slug": "168-days",
+    "name": "168 DAYS Mini App",
+    "caseStudyPath": "case-studies/168-days.md",
+    "hasAssets": false,
+    "featured": false,
+    "featuredOrder": null
+  },
+  {
+    "slug": "selected-websites",
+    "name": "Selected Local Business Websites",
+    "caseStudyPath": "case-studies/selected-websites.md",
+    "hasAssets": false,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Cover images already live in src/content/cases/*/cover.jpg, a separate Astro content system — not duplicated here."
+  },
+  {
+    "slug": "selected-client-systems",
+    "name": "Selected Client Systems",
+    "caseStudyPath": "case-studies/selected-client-systems.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Bundles multiple sub-projects. One cover image each is staged for Healthcare Admin Portal (assets/metaclinic), Contract Management SaaS (assets/cheers-contracts), and Education & Impact Platform (assets/instrumento) — all still need your confirmation on the visible real names in the UI chrome. Luxury Watch Marketplace has no matched screenshots yet."
+  },
+  {
+    "slug": "voltt",
+    "name": "Voltt",
+    "caseStudyPath": "case-studies/voltt.md",
+    "hasAssets": false,
+    "featured": false,
+    "featuredOrder": null
+  }
+]

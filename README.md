@@ -6,12 +6,15 @@ This repository is a public portfolio and case study collection. Production sour
 
 ## Featured Case Studies
 
+Order below follows [`assets/projects.json`](./assets/projects.json), the canonical featured-order registry — edit that file to reorder, no prose changes needed.
+
 | Project | Focus | Links |
 | --- | --- | --- |
-| AI Lead Scout | AI agent, research automation, verification, enrichment | [Case study](./case-studies/ai-lead-scout.md) |
 | Loomenio | AI-first SaaS, inventory, production operations | [Case study](./case-studies/loomenio.md)<br>[Live](https://app.loomenio.com) |
-| Helpview | Notion help center SaaS, search, publishing, widget | [Case study](./case-studies/helpview.md)<br>[Live](https://helpview.so/) |
 | AstuteWheel | Production SaaS, CRM, architecture, APIs, automation | [Case study](./case-studies/astutewheel.md) |
+| Helpview | Notion help center SaaS, search, publishing, widget | [Case study](./case-studies/helpview.md)<br>[Live](https://helpview.so/) |
+| Nothing Held Back (NHB) | Membership and coaching platform on Bubble.io | [Case study](./case-studies/nhb.md) |
+| AI Lead Scout | AI agent, research automation, verification, enrichment | [Case study](./case-studies/ai-lead-scout.md) |
 | AI Sleep Assistant | OpenAI, Stripe, subscriptions, embedded widget | [Case study](./case-studies/ai-sleep-assistant.md)<br>[Live](https://kim-sleep-assistant-62596.bubbleapps.io/) |
 | 168 DAYS | Mobile-first product prototype | [Case study](./case-studies/168-days.md)<br>[Repository](https://github.com/romanlozynskyi/168-days-mini-app) |
 | Selected Websites | Local business websites and landing experiences | [Case study](./case-studies/selected-websites.md) |

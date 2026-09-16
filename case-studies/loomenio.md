@@ -10,7 +10,14 @@ Loomenio is an operations platform for small-batch manufacturers. It brings inve
 
 The product is built around a simple idea: the application should help a maker understand what needs attention next without handing critical business logic to an LLM.
 
-![Loomenio Today](../assets/loomenio/screenshots/today.png)
+![Loomenio Today](../assets/loomenio/cover/today.png)
+
+## Screenshots
+
+![AI-assisted data capture](../assets/loomenio/screenshots/ai-capture.png)
+![Products and recipes](../assets/loomenio/screenshots/products.png)
+![Sales and reversals](../assets/loomenio/screenshots/sales.png)
+![CSV import](../assets/loomenio/screenshots/import.png)
 
 ## My role
 

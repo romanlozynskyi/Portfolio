@@ -6,6 +6,8 @@ These projects are supporting examples of workflow-heavy SaaS and internal busin
 
 A production-ready admin portal for a multi-clinic healthcare network.
 
+![Admin dashboard](../assets/metaclinic/cover/dashboard.jpg)
+
 Key areas:
 
 - dashboards with operational KPIs
@@ -22,6 +24,8 @@ Key areas:
 
 A workflow-heavy contract management product with analytics, contract pipeline, status tracking, contact CRM, team management, notifications, templates, search, pagination, and responsive UI.
 
+![Contract pipeline](../assets/cheers-contracts/cover/dashboard.jpg)
+
 Key areas:
 
 - contract pipeline and status tracking
@@ -35,6 +39,8 @@ Key areas:
 ## Education and Impact Management Platform
 
 An operations platform for a music-education nonprofit.
+
+![Impact management dashboard](../assets/instrumento/cover/dashboard.jpg)
 
 Modules included impact dashboards, activity and outcome tracking, student and teacher management, inventory, class scheduling, re-enrollment, surveys, messages, reports, attendance, and instrument management.
 

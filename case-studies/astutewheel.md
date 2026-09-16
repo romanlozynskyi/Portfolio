@@ -11,7 +11,23 @@ AstuteWheel is a mature financial planning SaaS and CRM platform used by more th
 
 My work has gone beyond the UI layer and covers system and database architecture, backend workflows, CRM operations, reporting, integrations, automation, performance optimization, and the ongoing evolution of a large production product.
 
-![AstuteWheel product overview](../assets/astutewheel/cover/product-overview.jpg)
+![AstuteWheel Scope of Advice](../assets/astutewheel/cover/scope-of-advice.png)
+
+## Screenshots
+
+![Dashboard](../assets/astutewheel/screenshots/dashboard.png)
+![Client and operational workflows](../assets/astutewheel/screenshots/clients.png)
+![Client wellbeing and financial planning](../assets/astutewheel/screenshots/wellbeing.png)
+![Complex data modeling — position detail](../assets/astutewheel/screenshots/position-detail.png)
+![Client record detail](../assets/astutewheel/screenshots/personal-detail.png)
+
+## Client feedback
+
+> "We've had the pleasure of working with Roman for the past three years on the development of our CRM system. His depth of knowledge in Bubble has been invaluable, particularly in designing and building complex system architecture, custom workflows, and seamless API integrations. What stands out most is his ability to take a high-level idea and translate it into a practical, well-designed solution that supports both our business needs and long-term scalability. He has consistently demonstrated professionalism, problem-solving skills, and a strong commitment to delivering quality outcomes. I'd highly recommend Roman to anyone seeking a skilled and reliable Bubble developer capable of handling advanced, large-scale projects"
+>
+> — Andrew W., verified client
+
+![Client review](../assets/testimonials/andrew-w-astutewheel.png)
 
 ## Areas of responsibility
 
