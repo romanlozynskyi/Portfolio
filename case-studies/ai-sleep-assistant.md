@@ -10,13 +10,13 @@ AI Sleep Assistant is a responsive AI chat product built for a sleep consulting 
 
 The product was built from scratch and delivered as a live client application.
 
-![Chat interface](../assets/ai-sleep-assistant/cover/chat.jpg)
+![Chat interface](../assets/ai-sleep-assistant/cover/chat.png)
 
 ## Screenshots
 
-![Mobile-first chat interface](../assets/ai-sleep-assistant/screenshots/mobile-chat.jpg)
-![User signup and login](../assets/ai-sleep-assistant/screenshots/signup.jpg)
-![Subscription screens](../assets/ai-sleep-assistant/screenshots/subscription.jpg)
+![Subscription plans](../assets/ai-sleep-assistant/screenshots/pricing.png)
+![Account and subscription management](../assets/ai-sleep-assistant/screenshots/account.png)
+![Mobile chat experience](../assets/ai-sleep-assistant/screenshots/mobile.png)
 
 ## Product scope
 

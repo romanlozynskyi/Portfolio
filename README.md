@@ -16,10 +16,8 @@ Order below follows [`assets/projects.json`](./assets/projects.json), the canoni
 | Nothing Held Back (NHB) | Membership and coaching platform on Bubble.io | [Case study](./case-studies/nhb.md) |
 | AI Lead Scout | AI agent, research automation, verification, enrichment | [Case study](./case-studies/ai-lead-scout.md) |
 | AI Sleep Assistant | OpenAI, Stripe, subscriptions, embedded widget | [Case study](./case-studies/ai-sleep-assistant.md)<br>[Live](https://kim-sleep-assistant-62596.bubbleapps.io/) |
-| 168 DAYS | Mobile-first product prototype | [Case study](./case-studies/168-days.md)<br>[Repository](https://github.com/romanlozynskyi/168-days-mini-app) |
-| Selected Websites | Local business websites and landing experiences | [Case study](./case-studies/selected-websites.md) |
-| Selected Client Systems | Healthcare, contracts, education, marketplace | [Case study](./case-studies/selected-client-systems.md) |
-| Voltt | Product rebuild in progress | [Project note](./case-studies/voltt.md) |
+
+Additional, non-featured case studies: [Selected Websites](./case-studies/selected-websites.md), [Selected Client Systems](./case-studies/selected-client-systems.md), [MetaClinic](./case-studies/metaclinic.md), [Cheers](./case-studies/cheers-contracts.md), [KraveConnect](./case-studies/kraveconnect.md), [Voltt](./case-studies/voltt.md).
 
 ## How these case studies are presented
 
@@ -27,13 +25,9 @@ The goal is to show the work without exposing commercial source code. Each case 
 
 Private production code, secrets, customer data, proprietary prompts, and sensitive implementation details are excluded.
 
-## Public Code
-
-The [168 DAYS Mini App](https://github.com/romanlozynskyi/168-days-mini-app) is a public frontend prototype built with Next.js, TypeScript, and Tailwind CSS.
-
-The local business website portfolio in this repository is also public and includes five live concepts for different service categories.
-
 ## Local Website Portfolio
+
+Public and live: five local business website concepts for different service categories.
 
 - [KVARC Detailing](https://kvarc-detailing.vercel.app/)
 - [Emal Dental](https://emal-dental-ten.vercel.app/)

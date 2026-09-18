@@ -10,6 +10,8 @@ AI Lead Scout is a campaign-oriented research agent built to deliver genuinely q
 
 A campaign keeps working across sources and batches until it reaches the requested number of qualified leads or exhausts the available sources.
 
+![Research, verify, enrich, qualify pipeline](../assets/ai-lead-scout/cover/pipeline.png)
+
 ## The problem
 
 Many lead generation tools stop after discovery. They may return companies, profiles, or contact records, but the user still has to answer the important questions manually:

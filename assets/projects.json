@@ -33,28 +33,22 @@
     "note": "Case study drafted from client-provided screenshots and testimonial only — no live URL or dates beyond what's shown/stated were available."
   },
   {
+    "slug": "ai-lead-scout",
+    "name": "AI Lead Scout",
+    "caseStudyPath": "case-studies/ai-lead-scout.md",
+    "hasAssets": true,
+    "featured": true,
+    "featuredOrder": 5,
+    "note": "Cover is a provided pipeline/process graphic (assets/ai-lead-scout/cover), not a product screenshot."
+  },
+  {
     "slug": "ai-sleep-assistant",
     "name": "AI Sleep Assistant",
     "caseStudyPath": "case-studies/ai-sleep-assistant.md",
     "hasAssets": true,
-    "featured": false,
-    "featuredOrder": null
-  },
-  {
-    "slug": "ai-lead-scout",
-    "name": "AI Lead Scout",
-    "caseStudyPath": "case-studies/ai-lead-scout.md",
-    "hasAssets": false,
-    "featured": false,
-    "featuredOrder": null
-  },
-  {
-    "slug": "168-days",
-    "name": "168 DAYS Mini App",
-    "caseStudyPath": "case-studies/168-days.md",
-    "hasAssets": false,
-    "featured": false,
-    "featuredOrder": null
+    "featured": true,
+    "featuredOrder": 6,
+    "note": "Cover and screenshots are a provided interface concept/mockup set (assets/ai-sleep-assistant), not literal captures of the live Bubble app."
   },
   {
     "slug": "selected-websites",
@@ -72,14 +66,42 @@
     "hasAssets": true,
     "featured": false,
     "featuredOrder": null,
-    "note": "Bundles multiple sub-projects. One cover image each is staged for Healthcare Admin Portal (assets/metaclinic), Contract Management SaaS (assets/cheers-contracts), and Education & Impact Platform (assets/instrumento) — all still need your confirmation on the visible real names in the UI chrome. Luxury Watch Marketplace has no matched screenshots yet."
+    "note": "Bundles remaining sub-projects: Education & Impact Platform (assets/instrumento, cover confirmed), Luxury Watch Marketplace (no screenshots yet), and SaaS Architecture Rescue (service description, no screenshots). Healthcare Admin Portal and Contract Management SaaS were split out into their own case studies (metaclinic, cheers-contracts)."
+  },
+  {
+    "slug": "metaclinic",
+    "name": "MetaClinic",
+    "caseStudyPath": "case-studies/metaclinic.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Split out from Selected Client Systems per owner instruction. Visible product name 'MetaClinic' shown in UI chrome, confirmed by owner. Patient/client-identifying screens (Chat, Clinics, Consultations, Dashboard1) excluded; only aggregate dashboard and configuration screens published."
+  },
+  {
+    "slug": "cheers-contracts",
+    "name": "Cheers",
+    "caseStudyPath": "case-studies/cheers-contracts.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Split out from Selected Client Systems per owner instruction. Visible product name 'Cheers' shown in UI chrome, confirmed by owner. Screens with real-looking counterparty names, emails, phone numbers, and a company registration number (Contracts, Management, Mob_T, Mob_T1) excluded; only aggregate/anonymous dashboard views published."
+  },
+  {
+    "slug": "kraveconnect",
+    "name": "KraveConnect",
+    "caseStudyPath": "case-studies/kraveconnect.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Added from screenshots only, no written brief — role, stack, and outcome are unconfirmed. Restaurant business listings (name/address/phone) kept as the product's own directory content, not third-party PII."
   },
   {
     "slug": "voltt",
     "name": "Voltt",
     "caseStudyPath": "case-studies/voltt.md",
-    "hasAssets": false,
+    "hasAssets": true,
     "featured": false,
-    "featuredOrder": null
+    "featuredOrder": null,
+    "note": "Rebuild in progress. New diagnostic-dashboard screenshot added; demo tenant data (Alex Chen / NovaTech) throughout."
   }
 ]

@@ -8,6 +8,10 @@
 
 Voltt is entering a rebuild phase. The work is being approached architecture-first so the new implementation can support product growth instead of reproducing short-term prototype decisions.
 
+An early build of the startup diagnostic dashboard is already in place, covering an overall readiness score, per-dimension diagnostics, a 7/30/90-day roadmap, an evidence tracker, and an AI coach panel.
+
+![Startup diagnostic dashboard](../assets/voltt/cover/dashboard.jpg)
+
 ## Portfolio approach
 
 This case study will be expanded as implementation starts. The public version will document decisions and outcomes without exposing the private production repository.

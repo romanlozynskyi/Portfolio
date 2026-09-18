@@ -2,40 +2,6 @@
 
 These projects are supporting examples of workflow-heavy SaaS and internal business systems. They are not positioned as the primary featured work, but they show breadth across operational products.
 
-## Healthcare Admin Portal
-
-A production-ready admin portal for a multi-clinic healthcare network.
-
-![Admin dashboard](../assets/metaclinic/cover/dashboard.jpg)
-
-Key areas:
-
-- dashboards with operational KPIs
-- client and patient records
-- consultation statuses
-- doctors and providers
-- filters and notifications
-- finance-related workflows
-- user roles and permissions
-- admin workflows
-- responsive operational UI
-
-## Contract Management SaaS
-
-A workflow-heavy contract management product with analytics, contract pipeline, status tracking, contact CRM, team management, notifications, templates, search, pagination, and responsive UI.
-
-![Contract pipeline](../assets/cheers-contracts/cover/dashboard.jpg)
-
-Key areas:
-
-- contract pipeline and status tracking
-- CRM and contact management
-- analytics dashboard
-- team and role-based access
-- notifications and templates
-- billing, email, and SMS integration hooks
-- product and data structure design
-
 ## Education and Impact Management Platform
 
 An operations platform for a music-education nonprofit.
