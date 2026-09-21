@@ -59,3 +59,7 @@ Markdown case studies under `../case-studies/` link images with relative paths, 
 ## Home featured order
 
 [`projects.json`](projects.json) at the root of this folder is the single canonical source for which projects are featured on Home and in what order (`featured` + `featuredOrder`). It's a plain, hand-editable JSON array — reorder or toggle projects there, no code or prose changes needed. `README.md` and `case-studies/README.md` are kept in sync with it by hand for now (there's no build step that generates them from this file); if that ever changes, this file is the thing a generator should read.
+
+## Websites (external-link cards)
+
+[`websites.json`](websites.json) lists standalone websites that appear on the site's "Websites & Landing Pages" Work category page as their own cards linking straight to the live site (no internal case-study page). Add an entry to show another site; no code changes needed. Fields: `slug`, `name`, `url` (required, https — an entry without a real live URL is skipped with a warning, never guessed), `cover` (path to a repo image, ideally `assets/websites/<slug>/cover/cover.jpg`, 16:9), `description` (`en` required, `uk` optional), `visible` (default `true`), `order` (ascending).

@@ -57,16 +57,7 @@
     "hasAssets": false,
     "featured": false,
     "featuredOrder": null,
-    "note": "Cover images already live in src/content/cases/*/cover.jpg, a separate Astro content system — not duplicated here."
-  },
-  {
-    "slug": "selected-client-systems",
-    "name": "Selected Client Systems",
-    "caseStudyPath": "case-studies/selected-client-systems.md",
-    "hasAssets": true,
-    "featured": false,
-    "featuredOrder": null,
-    "note": "Bundles remaining sub-projects: Education & Impact Platform (assets/instrumento, cover confirmed), Luxury Watch Marketplace (no screenshots yet), and SaaS Architecture Rescue (service description, no screenshots). Healthcare Admin Portal and Contract Management SaaS were split out into their own case studies (metaclinic, cheers-contracts)."
+    "note": "Superseded on the site's Work category page by the individual entries in assets/websites.json (five separate website cards linking straight to each live site). The bundled case study page still exists."
   },
   {
     "slug": "metaclinic",
@@ -103,5 +94,14 @@
     "featured": false,
     "featuredOrder": null,
     "note": "Rebuild in progress. New diagnostic-dashboard screenshot added; demo tenant data (Alex Chen / NovaTech) throughout."
+  },
+  {
+    "slug": "selected-client-systems",
+    "name": "Selected Client Systems",
+    "caseStudyPath": "case-studies/selected-client-systems.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Bundles remaining sub-projects: Education & Impact Platform (assets/instrumento, cover confirmed), Luxury Watch Marketplace (no screenshots yet), and SaaS Architecture Rescue (service description, no screenshots). Healthcare Admin Portal and Contract Management SaaS were split out into their own case studies (metaclinic, cheers-contracts)."
   }
 ]

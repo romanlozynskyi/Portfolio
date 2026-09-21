@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "kvarc-detailing",
+    "name": "KVARC Detailing",
+    "url": "https://kvarc-detailing.vercel.app/",
+    "cover": "assets/websites/kvarc-detailing/cover/cover.jpg",
+    "description": {
+      "en": "Car detailing website built around price clarity, package comparison, and a fast booking path.",
+      "uk": "Сайт студії детейлінгу: зрозумілі ціни, порівняння пакетів і швидке бронювання."
+    },
+    "visible": true,
+    "order": 1
+  },
+  {
+    "slug": "emal-dental",
+    "name": "Emal Dental",
+    "url": "https://emal-dental-ten.vercel.app/",
+    "cover": "assets/websites/emal-dental/cover/cover.jpg",
+    "description": {
+      "en": "Dental clinic website that reduces uncertainty before booking: doctors, pricing, and a clear first appointment.",
+      "uk": "Сайт стоматології, що знімає тривогу перед записом: лікарі, ціни та зрозумілий перший візит."
+    },
+    "visible": true,
+    "order": 2
+  },
+  {
+    "slug": "malva-beauty",
+    "name": "MALVA Beauty",
+    "url": "https://malva-beauty-studio.vercel.app/",
+    "cover": "assets/websites/malva-beauty/cover/cover.jpg",
+    "description": {
+      "en": "Beauty studio website with services, prices, specialists, and booking in one place.",
+      "uk": "Сайт б'юті-студії: послуги, ціни, майстри та запис в одному місці."
+    },
+    "visible": true,
+    "order": 3
+  },
+  {
+    "slug": "rivno-renovation",
+    "name": "RIVNO Renovation",
+    "url": "https://rivno-renovation.vercel.app/",
+    "cover": "assets/websites/rivno-renovation/cover/cover.jpg",
+    "description": {
+      "en": "Renovation company website focused on trust: estimate logic, staged payments, and clear terms.",
+      "uk": "Сайт ремонтної компанії, побудований на довірі: логіка кошторису, поетапна оплата та чіткі умови."
+    },
+    "visible": true,
+    "order": 4
+  },
+  {
+    "slug": "popil-restaurant",
+    "name": "POPIL Restaurant",
+    "url": "https://popil-restaurant.vercel.app/",
+    "cover": "assets/websites/popil-restaurant/cover/cover.jpg",
+    "description": {
+      "en": "Restaurant website about atmosphere, concept, and menu storytelling, with a short table booking flow.",
+      "uk": "Сайт ресторану про атмосферу, концепцію та історію меню з коротким бронюванням столу."
+    },
+    "visible": true,
+    "order": 5
+  }
+]
