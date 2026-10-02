@@ -1,5 +1,53 @@
 [
   {
+    "slug": "loomenio",
+    "name": "Loomenio",
+    "url": "https://www.loomenio.com/",
+    "cover": "assets/websites/loomenio/cover/cover.jpg",
+    "description": {
+      "en": "Website for inventory and production planning software for small-batch makers: stock, recipes, production, and sales turned into clear daily actions.",
+      "uk": "Сайт програмного забезпечення для обліку запасів і планування виробництва для виробників малих партій: запаси, рецептури, виробництво та продажі перетворюються на зрозумілі щоденні дії."
+    },
+    "visible": true,
+    "order": 1
+  },
+  {
+    "slug": "quantix-studio",
+    "name": "Quantix Studio",
+    "url": "https://www.quantixstudio.com/",
+    "cover": "assets/websites/quantix-studio/cover/cover.jpg",
+    "description": {
+      "en": "Website for a two-founder engineering studio that builds custom software, rescues Bubble and AI-built apps, and automates business workflows.",
+      "uk": "Сайт інженерної студії з двох засновників, яка створює індивідуальне програмне забезпечення, рятує застосунки на Bubble і створені за допомогою ШІ та автоматизує бізнес-процеси."
+    },
+    "visible": true,
+    "order": 2
+  },
+  {
+    "slug": "helpview",
+    "name": "Helpview",
+    "url": "https://helpview.so/",
+    "cover": "assets/websites/helpview/cover/cover.jpg",
+    "description": {
+      "en": "Product website for Helpview, which turns Notion into a polished help center with search, custom branding, and an embeddable widget.",
+      "uk": "Сайт продукту Helpview, який перетворює Notion на зручний довідковий центр із пошуком, власним брендингом і віджетом для вбудовування."
+    },
+    "visible": true,
+    "order": 3
+  },
+  {
+    "slug": "nothing-held-back",
+    "name": "Nothing Held Back (NHB)",
+    "url": "https://www.nothingheldback.com/",
+    "cover": "assets/websites/nothing-held-back/cover/cover.jpg",
+    "description": {
+      "en": "Website for a premium business and marketing education membership, with a waitlist sign-up and a preview of the member platform.",
+      "uk": "Сайт преміальної освітньої спільноти з бізнесу та маркетингу: запис до списку очікування та перегляд платформи для учасників."
+    },
+    "visible": true,
+    "order": 4
+  },
+  {
     "slug": "kvarc-detailing",
     "name": "KVARC Detailing",
     "url": "https://kvarc-detailing.vercel.app/",
@@ -9,43 +57,7 @@
       "uk": "Сайт студії детейлінгу: зрозумілі ціни, порівняння пакетів і швидке бронювання."
     },
     "visible": true,
-    "order": 1
-  },
-  {
-    "slug": "emal-dental",
-    "name": "Emal Dental",
-    "url": "https://emal-dental-ten.vercel.app/",
-    "cover": "assets/websites/emal-dental/cover/cover.jpg",
-    "description": {
-      "en": "Dental clinic website that reduces uncertainty before booking: doctors, pricing, and a clear first appointment.",
-      "uk": "Сайт стоматології, що знімає тривогу перед записом: лікарі, ціни та зрозумілий перший візит."
-    },
-    "visible": true,
-    "order": 2
-  },
-  {
-    "slug": "malva-beauty",
-    "name": "MALVA Beauty",
-    "url": "https://malva-beauty-studio.vercel.app/",
-    "cover": "assets/websites/malva-beauty/cover/cover.jpg",
-    "description": {
-      "en": "Beauty studio website with services, prices, specialists, and booking in one place.",
-      "uk": "Сайт б'юті-студії: послуги, ціни, майстри та запис в одному місці."
-    },
-    "visible": true,
-    "order": 3
-  },
-  {
-    "slug": "rivno-renovation",
-    "name": "RIVNO Renovation",
-    "url": "https://rivno-renovation.vercel.app/",
-    "cover": "assets/websites/rivno-renovation/cover/cover.jpg",
-    "description": {
-      "en": "Renovation company website focused on trust: estimate logic, staged payments, and clear terms.",
-      "uk": "Сайт ремонтної компанії, побудований на довірі: логіка кошторису, поетапна оплата та чіткі умови."
-    },
-    "visible": true,
-    "order": 4
+    "order": 5
   },
   {
     "slug": "popil-restaurant",
@@ -57,6 +69,55 @@
       "uk": "Сайт ресторану про атмосферу, концепцію та історію меню з коротким бронюванням столу."
     },
     "visible": true,
-    "order": 5
+    "order": 6
+  },
+  {
+    "slug": "malva-beauty",
+    "name": "MALVA Beauty",
+    "url": "https://malva-beauty-studio.vercel.app/",
+    "cover": "assets/websites/malva-beauty/cover/cover.jpg",
+    "description": {
+      "en": "Beauty studio website with services, prices, specialists, and booking in one place.",
+      "uk": "Сайт б'юті-студії: послуги, ціни, майстри та запис в одному місці."
+    },
+    "visible": true,
+    "order": 7
+  },
+  {
+    "slug": "emal-dental",
+    "name": "Emal Dental",
+    "url": "https://emal-dental-ten.vercel.app/",
+    "cover": "assets/websites/emal-dental/cover/cover.jpg",
+    "description": {
+      "en": "Dental clinic website that reduces uncertainty before booking: doctors, pricing, and a clear first appointment.",
+      "uk": "Сайт стоматології, що знімає тривогу перед записом: лікарі, ціни та зрозумілий перший візит."
+    },
+    "visible": true,
+    "order": 8
+  },
+  {
+    "slug": "astutewheel",
+    "name": "AstuteWheel",
+    "url": "https://www.astutewheel.com.au/",
+    "cover": "assets/websites/astutewheel/cover/cover.jpg",
+    "description": {
+      "en": "Website for Australian financial planning software that helps advice practices with client engagement, advice delivery, practice management, and business improvement.",
+      "uk": "Сайт австралійського програмного забезпечення для фінансового планування, що допомагає консультаційним практикам із залученням клієнтів, наданням порад, управлінням практикою та розвитком бізнесу."
+    },
+    "visible": true,
+    "order": 9
+  },
+  {
+    "slug": "rivno-renovation",
+    "name": "RIVNO Renovation",
+    "url": "https://rivno-renovation.vercel.app/",
+    "cover": "assets/websites/rivno-renovation/cover/cover.jpg",
+    "description": {
+      "en": "Renovation company website focused on trust: estimate logic, staged payments, and clear terms.",
+      "uk": "Сайт ремонтної компанії, побудований на довірі: логіка кошторису, поетапна оплата та чіткі умови."
+    },
+    "visible": true,
+    "order": 10,
+    "pin": "last"
   }
 ]

@@ -25,15 +25,20 @@ The goal is to show the work without exposing commercial source code. Each case 
 
 Private production code, secrets, customer data, proprietary prompts, and sensitive implementation details are excluded.
 
-## Local Website Portfolio
+## Live Websites
 
-Public and live: five local business website concepts for different service categories.
+Public and live: product and company websites, plus five local business website concepts for different service categories. Listed in the order shown on the portfolio site (`assets/websites.json`, `order`).
 
+- [Loomenio](https://www.loomenio.com/)
+- [Quantix Studio](https://www.quantixstudio.com/)
+- [Helpview](https://helpview.so/)
+- [Nothing Held Back (NHB)](https://www.nothingheldback.com/)
 - [KVARC Detailing](https://kvarc-detailing.vercel.app/)
-- [Emal Dental](https://emal-dental-ten.vercel.app/)
-- [MALVA Beauty](https://malva-beauty-studio.vercel.app/)
-- [RIVNO Renovation](https://rivno-renovation.vercel.app/)
 - [POPIL Restaurant](https://popil-restaurant.vercel.app/)
+- [MALVA Beauty](https://malva-beauty-studio.vercel.app/)
+- [Emal Dental](https://emal-dental-ten.vercel.app/)
+- [AstuteWheel](https://www.astutewheel.com.au/)
+- [RIVNO Renovation](https://rivno-renovation.vercel.app/)
 
 ## About
 
