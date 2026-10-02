@@ -15,7 +15,7 @@ According to the client, Roman worked on NHB for around a year, brought in for t
 ## Screenshots
 
 ![Coaching library and featured coaches](../assets/nhb/screenshots/library.png)
-![Resource hub — templates, swipe files, and tools](../assets/nhb/screenshots/resources.png)
+![Resource hub: templates, swipe files, and tools](../assets/nhb/screenshots/resources.png)
 ![Community forums](../assets/nhb/screenshots/forums.png)
 ![Login and membership entry](../assets/nhb/screenshots/login.png)
 
@@ -36,7 +36,7 @@ Based on the product's own navigation and screens:
 The client's account of the engagement, in their own words:
 
 - A performance audit of the live app to identify the heaviest capacity drains before a scaling push
-- A Netflix-style account-sharing prevention system — evaluating device fingerprinting, IP/geo signals, and session limits before choosing an approach
+- A Netflix-style account-sharing prevention system, evaluating device fingerprinting, IP/geo signals, and session limits before choosing an approach
 - Geo-blocking built into the application itself (infrastructure-level blocking wasn't an option), including IP country detection and a config changeable without a redeploy
 - A billing reconciliation tool that parsed subscription records, cross-checked them against the database, and flagged only genuine mismatches for review, with safety checks against accidental cancellations
 - Ownership of the Library, Resources, and Fast Feedback areas of the product, including a full Fast Feedback redesign
@@ -49,7 +49,7 @@ The client's account of the engagement, in their own words:
 
 > "Roman is reliable, he thinks things through, and he's genuinely strong on the architecture side. If you're building something on Bubble that needs to hold up as it grows, he's a good person to have."
 
-— Max Iver, Head of Design at Nothing Held Back
+Max Iver, Head of Design at Nothing Held Back
 
 ![Client review](../assets/testimonials/max-iver-nhb.png)
 
@@ -66,4 +66,4 @@ The full review is preserved verbatim in [`assets/testimonials/testimonials.json
 
 ## Public portfolio note
 
-This case study is built only from product screenshots and a client testimonial provided directly — no other source material (contracts, dates, internal documentation) was available at the time of writing. Figures visible in the screenshots (e.g. member counts, content counts) reflect a single point in time and aren't claimed as current.
+This case study is built only from product screenshots and a client testimonial provided directly, with no other source material (contracts, dates, internal documentation) was available at the time of writing. Figures visible in the screenshots (e.g. member counts, content counts) reflect a single point in time and aren't claimed as current.

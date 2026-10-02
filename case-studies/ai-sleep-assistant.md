@@ -2,79 +2,65 @@
 
 **Category:** AI Product / Client SaaS / Subscription App  
 **Live:** https://kim-sleep-assistant-62596.bubbleapps.io/  
-**Source code:** Private
+**Source code:** Private  
+**Work period:** Nov 2025 to Jan 2026  
+**Role:** Built the app from scratch and delivered it live: chat interface, OpenAI and Stripe integration, WordPress widget, admin access, and documentation.  
+**Problem:** A sleep consulting business needed its existing GPT-based assistant turned into a customer-facing product with free and paid access.  
+**Result:** Delivered live after end-to-end testing. The client confirmed the app, Bubble setup, and Stripe flow worked well and left a 5-star review.  
+**Metric:** 5.0 | Client rating  
 
 ## Overview
 
-AI Sleep Assistant is a responsive AI chat product built for a sleep consulting business. The project connected an existing GPT-based assistant to a customer-facing application with free and paid access modes.
+AI Sleep Assistant is a responsive AI chat product built for a sleep consulting business.
 
-The product was built from scratch and delivered as a live client application.
+It connects the client's existing GPT-based assistant to a customer-facing application with free and paid access modes.
 
-![Chat interface](../assets/ai-sleep-assistant/cover/chat.png)
+![Chat interface. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/cover/chat.png)
 
-## Screenshots
+## Problem
 
-![Subscription plans](../assets/ai-sleep-assistant/screenshots/pricing.png)
-![Account and subscription management](../assets/ai-sleep-assistant/screenshots/account.png)
-![Mobile chat experience](../assets/ai-sleep-assistant/screenshots/mobile.png)
+The client already had a GPT-based sleep assistant. What it lacked was a product around it: a clean chat experience, accounts, paid subscriptions, and a way to offer the assistant on the client's own WordPress site.
 
-## Product scope
+## What I built
 
-- Mobile-first chat interface
-- Guest access in free mode
-- User signup and login
-- Free and paid account state
-- OpenAI API integration
-- Stripe checkout and subscriptions
-- Payment-driven subscription status updates
-- Account and subscription screens
-- Upgrade flows
+- Mobile-first chat interface, with guest access in free mode
+- Signup and login, with free and paid account states
+- OpenAI API integration for the assistant's responses
+- Stripe checkout and subscriptions, with payment-driven status updates
+- Account and subscription screens, and upgrade flows
 - Embedded WordPress chat widget
-- Admin access for user management
-- Documentation and Loom walkthrough
+- Admin access for user management, documentation, and a Loom walkthrough
 
-## User flow
+![Responsive chat on mobile, with login and widget views. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/mobile.png)
+![Free and paid plans. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/pricing.png)
 
-The public experience was designed to remove friction:
+## Stack and architecture
 
-1. Open the app.
-2. Start chatting immediately in free mode.
-3. Sign up when the user wants paid functionality.
-4. Move directly into subscription selection after signup.
-5. Complete Stripe checkout.
-6. Update account status after successful payment.
-7. Continue with the paid assistant experience.
+`Bubble` `OpenAI API` `Stripe` `WordPress`
 
-The WordPress widget was intentionally separate from the full account and subscription flow. It opens a smaller chat experience while authentication and billing stay in the main app.
+The app coordinates three external layers:
 
-## Integration work
-
-The application coordinates three external layers:
-
-- OpenAI for assistant responses
+- OpenAI for the assistant's responses
 - Stripe for payment and subscription state
 - WordPress for embedded distribution
 
-The work included aligning subscription flows so payment status updated consistently regardless of where checkout was started.
+## Key decisions
 
-## Delivery evidence
+- Free mode comes first: users open the app and start chatting immediately, sign up only when they want paid features, then go straight to plan selection and Stripe checkout.
+- The widget stays separate from billing: the WordPress widget opens a smaller chat experience, while authentication and subscriptions stay in the main app.
+- Subscription state stays consistent: payment status updates the same way regardless of where checkout was started.
+- Assistant logic stays with the client: per the client brief, the app passes each message and the user's free or paid status to the GPT and holds no sleep logic of its own.
 
-The application was deployed live after end-to-end testing. The client later confirmed that the live app, Bubble setup, and Stripe flow were working well and left a 5-star review.
+![Account and subscription management. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/account.png)
 
-> "Roman was fantastic to work with. He's quick to respond, very professional, and highly skilled. He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant. He communicated clearly throughout, and fixed issues quickly during testing. He delivered high-quality work quickly and stayed responsive throughout. He sent a Loom video that made it easy for me to manage updates going forward. Everything is working so well, and the final result looks great. I would absolutely hire Roman again and highly recommend him."
+## Results and evidence
 
-![Client review](../assets/testimonials/upwork-review-01-full.png)
+The application was deployed live after end-to-end testing. The client later confirmed that the live app, the Bubble setup, and the Stripe flow were working well, and left a 5-star review.
 
-## What this case demonstrates
+> "He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant."
 
-- AI product integration
-- Subscription product logic
-- Stripe checkout and state synchronization
-- Mobile-first chat UX
-- Guest-to-paid conversion flows
-- Embeddable widgets
-- Client delivery and production launch
+![Client review of the project, original screenshot.](../assets/testimonials/upwork-review-01-full.png)
 
 ## Public portfolio note
 
-Private API credentials, assistant instructions, customer data, and production implementation details are intentionally excluded.
+Private API credentials, assistant instructions, customer data, and production implementation details are intentionally excluded. The interface visuals on this page are presentation mockups, not captures of the live app.

@@ -2,129 +2,73 @@
 
 **Category:** AI Agent / Research Automation / Lead Intelligence  
 **Status:** Active development  
-**Source code:** Private
+**Source code:** Private  
+**Role:** Built the research agent: campaign orchestration, source adapters, verification, enrichment, scoring, and tests.  
+**Problem:** Lead tools stop at discovery, so every company, person, and contact path still has to be checked by hand.  
+**Result:** In a Bubble App Gallery campaign, 31 applications were enriched and 27 became contactable ICP leads, with 24 false identity matches rejected.  
+**Metric:** 30 of 31 | applications confirmed active  
+**Metric:** 23 | with a verified founder or owner  
+**Metric:** 21 | with a contactable decision-maker  
+**Metric:** 23 | with a verified LinkedIn path  
+**Metric:** 27 | classified as contactable ICP leads  
+**Metric:** 24 | false identity matches rejected  
 
 ## Overview
 
-AI Lead Scout is a campaign-oriented research agent built to deliver genuinely qualified, current, contactable leads. The system is designed around campaign outcomes rather than simply completing a search stage or returning a list of names.
+AI Lead Scout is a campaign-oriented research agent that finds, verifies, and enriches leads.
 
-A campaign keeps working across sources and batches until it reaches the requested number of qualified leads or exhausts the available sources.
+It keeps working across sources and batches until a campaign reaches the requested number of qualified, contactable leads, or the available sources run out.
 
-![Research, verify, enrich, qualify pipeline](../assets/ai-lead-scout/cover/pipeline.png)
+![Pipeline overview: sources, research, verification, enrichment, scoring, and qualified leads. The lead cards in the graphic are illustrative.](../assets/ai-lead-scout/cover/pipeline.png)
 
-## The problem
+## Problem
 
-Many lead generation tools stop after discovery. They may return companies, profiles, or contact records, but the user still has to answer the important questions manually:
+Many lead tools stop after discovery. They return companies or contact records, and the user still has to answer the questions that matter:
 
-- Is the company actually active?
-- Is it relevant to the campaign?
-- Is the person really the right decision-maker?
-- Is the identity match reliable?
-- Is there a usable contact path?
-- Is there enough evidence to justify outreach?
+- Is the company active and relevant to the campaign?
+- Is this person the right decision-maker, and is the identity match reliable?
+- Is there a usable contact path and enough evidence to justify outreach?
 
 AI Lead Scout moves those checks into the research pipeline.
 
-## Architecture
+## What I built
 
-```mermaid
-flowchart LR
-    A[Campaign requirements] --> B[Campaign orchestrator]
-    B --> C[Source router]
-    C --> D1[Official APIs]
-    C --> D2[Direct HTTP]
-    C --> D3[Playwright]
-    C --> D4[Exa]
-    C --> D5[Apify]
-    D1 --> E[Candidate pool]
-    D2 --> E
-    D3 --> E
-    D4 --> E
-    D5 --> E
-    E --> F[Company verification]
-    F --> G[Decision-maker research]
-    G --> H[Identity verification]
-    H --> I[Contact enrichment]
-    I --> J[Evidence scoring]
-    J --> K[Deduplication]
-    K --> L{Target reached?}
-    L -- No --> C
-    L -- Yes --> M[Qualified contactable leads]
-```
+A campaign orchestrator drives source-specific adapters through one pipeline:
 
-## System design
+1. Interpret the campaign requirements and select suitable sources.
+2. Discover candidate companies or products.
+3. Verify that each company is active and relevant.
+4. Identify the likely decision-maker and verify the identity with evidence.
+5. Enrich contact paths such as LinkedIn, email, Instagram, Facebook, phone, or contact forms.
+6. Score qualification and evidence quality, and reject weak or unsafe matches.
+7. Deduplicate across sources.
+8. Continue until the campaign target is reached or source capacity is exhausted.
 
-The agent is structured around a campaign orchestrator and source-specific adapters.
+## Stack and architecture
 
-Typical flow:
+`TypeScript` `Playwright` `Exa` `Apify` `Web Research` `Automation` `Data Enrichment`
 
-1. Interpret campaign requirements.
-2. Select suitable sources.
-3. Discover candidate companies or products.
-4. Verify that the company is active and relevant.
-5. Identify the likely decision-maker.
-6. Verify identity with evidence instead of accepting weak name matches.
-7. Enrich contact paths such as LinkedIn, email, Instagram, Facebook, phone, or contact forms.
-8. Score qualification and evidence quality.
-9. Reject weak or unsafe matches.
-10. Deduplicate across sources.
-11. Continue until the campaign target is reached or source capacity is exhausted.
-
-## Source strategy
-
-The provider strategy favors reliable and low-cost access before expensive fallback methods:
+Source routing prefers reliable, low-cost access and falls back only when needed:
 
 1. Official API or data endpoint
 2. Direct HTTP parsing
 3. Local browser automation with Playwright
 4. Search and enrichment providers such as Exa
 5. Proven source-specific Apify Actors
-6. Generic scraping providers only when necessary
+6. Generic scraping providers, only when necessary
 
-Cost is treated as part of routing logic. Campaigns can enforce zero incremental spend or require approval before using metered providers.
+Cost is part of the routing logic. A campaign can enforce zero incremental spend or require approval before a metered provider is used.
 
-## Verification philosophy
+## Key decisions
 
-The system is intentionally conservative around identity and contact data.
+- Campaigns are outcome-based: the agent runs until the target of qualified leads is met, not until one search stage finishes.
+- Verification is conservative: a name match alone is not enough. The agent looks for supporting evidence such as company role, product ownership, profile history, or current activity, and rejects false identity matches instead of passing them through.
+- Capability and cost are separate: a later architecture audit made sure a source marked as technically available cannot silently be treated as free.
+- Automated tests cover source adapters, capability declarations, campaign behavior, cost policy, enrichment, and verification logic.
 
-A candidate is not considered strong simply because a name appears to match. The agent looks for supporting evidence such as company role, product ownership, profile history, current activity, or other corroborating signals.
+## Results and evidence
 
-False identity matches are rejected instead of being silently passed through as leads.
-
-## Example campaign evidence
-
-A Bubble App Gallery campaign produced 31 unique applications for enrichment. In that run:
-
-- 30 of 31 applications were confirmed active
-- 23 had a verified founder or owner
-- 21 had a contactable decision-maker
-- 23 had a verified LinkedIn path
-- 27 were classified as contactable ICP leads
-- 24 false identity matches were rejected during verification
-
-The important result is not the raw discovery count. It is the reduction from candidates to evidence-backed, usable leads.
-
-## Quality and testing
-
-The agent includes automated tests around source adapters, capability declarations, campaign behavior, cost policy, enrichment, and verification logic.
-
-A later architecture audit also separated provider capability from incremental cost, so a source marked as technically available cannot silently be treated as free.
-
-## Stack
-
-`TypeScript` `Playwright` `Exa` `Apify` `Web Research` `Automation` `Data Enrichment`
-
-## What this case demonstrates
-
-- Multi-source agent orchestration
-- Outcome-based campaign logic
-- Source routing and fallback strategies
-- Browser automation and scraping
-- Decision-maker research
-- Evidence-based verification
-- Cost-aware execution
-- Deduplication and campaign state
-- Test-driven agent development
+A Bubble App Gallery campaign produced 31 unique applications for enrichment. The important result is not the discovery count but the reduction from candidates to evidence-backed, usable leads: 27 were classified as contactable ICP leads, and 24 false identity matches were rejected during verification.
 
 ## Public portfolio note
 
