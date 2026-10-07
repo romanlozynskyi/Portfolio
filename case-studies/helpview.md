@@ -3,9 +3,13 @@
 **Category:** SaaS / Knowledge Base / Notion Integration  
 **Live:** https://helpview.so/  
 **Source code:** Private  
-**Role:** Product engineering on a Bubble-based SaaS: content sync, publishing, search, theming, custom domains, analytics, and the embedded widget.  
+**Role:** Product engineering on a Notion-powered help center SaaS: content sync, publishing, search, theming, custom domains, analytics, and the embedded widget.  
 **Problem:** Teams want to keep writing in Notion, but customers need a searchable, branded help center.  
-**Result:** A live product that publishes one Notion content source as a help center, documentation, and an embedded widget, with search analytics that expose content gaps.  
+**Result:** A live product that publishes one Notion content source as a help center, documentation, and an embedded widget, with synced publishing and search analytics that expose content gaps.  
+**Metric:** 3 | customer-facing surfaces from one Notion content source | product | Help center, documentation, and an embedded help widget  
+**Metric:** 3-step | publishing flow | product | Connect Notion, organize content, publish  
+**Metric:** Search | with zero-result analytics | product | Shows what customers cannot find  
+**Metric:** Synced | publishing from Notion | product | Notion stays the editing source  
 
 ## Overview
 
@@ -31,12 +35,7 @@ I worked on the product as an engineer on the full SaaS, not only the page layer
 
 ## Product outcomes & evidence
 
-What the product delivers, visible in the live product at helpview.so:
-
-- Notion pages published as customer-facing help content
-- A searchable help center, a help widget, and SEO-friendly publishing
-- Theme and brand customization, multiple languages, and custom domains
-- Search insights, including zero-result searches and content gaps
+What the product delivers, visible in the live product at helpview.so: three customer-facing surfaces from one Notion content source, a three-step publishing flow, search with zero-result analytics, and publishing that stays synced with Notion.
 
 ![Dashboard and search analytics](../assets/helpview/screenshots/dashboard.png)
 
@@ -50,16 +49,17 @@ What the product delivers, visible in the live product at helpview.so:
 
 ## System & architecture
 
-`Bubble` `Notion`
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `Notion API` `Cloudflare Workers` `Cloudflare R2` `Vercel`
 
-The product coordinates content synchronization, data structure, publishing state, search, theming, permissions, custom domains, analytics, and an embedded support experience. The application layer is built on Bubble, while the engineering focus is SaaS architecture, workflows, integrations, and user-facing support experiences rather than only page construction.
+The product coordinates content synchronization, data structure, publishing state, search, theming, permissions, custom domains, analytics, and an embedded support experience. The application runs on Next.js, TypeScript, Supabase, and PostgreSQL, with the Notion API for content sync, Cloudflare Workers and Cloudflare R2, and Vercel.
+
+Publishing takes three steps:
 
 1. Connect the Notion workspace.
-2. Select and organize help content.
-3. Configure the help center style and behavior.
-4. Publish to a Helpview subdomain or custom domain.
-5. Keep Notion as the editing source.
-6. Use search behavior and analytics to improve documentation over time.
+2. Select and organize help content, and configure the help center style and behavior.
+3. Publish to a Helpview subdomain or custom domain.
+
+Notion stays the editing source, and search behavior and analytics feed back into improving the documentation over time.
 
 ![Notion sync settings](../assets/helpview/screenshots/settings-sync.png)
 
@@ -71,15 +71,15 @@ Coordinating one content source across several surfaces. The product requires co
 
 ## Outcome
 
-Helpview is live at helpview.so: teams connect a Notion workspace, publish a searchable help center on a subdomain or custom domain, and use search analytics to find gaps in their documentation.
+Helpview is live at helpview.so. One Notion content source becomes three customer-facing surfaces through a three-step publishing flow that stays synced with Notion, and search with zero-result analytics shows teams where their documentation has gaps.
 
 ## What this demonstrates
 
-- SaaS product development around a third-party content source
-- Notion integration workflows and content synchronization
-- Search and knowledge base UX across multi-surface publishing
-- Customization, theming, and embedded widget flows
-- Analytics-driven product feedback
+- Content architecture: one Notion content source published to a help center, documentation, and an embedded widget
+- Search and discovery: a searchable help center with zero-result analytics
+- Feedback loops: search behavior and content gaps feed back into the documentation
+- Notion integration: synced publishing with Notion as the editing source
+- Customer-facing product UX: theming, branding, multiple languages, custom domains, and an embedded widget
 
 ## Public portfolio note
 

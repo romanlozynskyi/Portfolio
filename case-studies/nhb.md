@@ -1,15 +1,18 @@
 # Nothing Held Back (NHB)
 
 **Category:** SaaS / Membership & Coaching Platform  
-**Stack:** Bubble.io  
+**Live:** https://www.nothingheldback.com/  
 **Source code:** Private  
-**Role:** Systems-level engineer, per the client: around a year on a Bubble.io membership platform covering performance, abuse prevention, billing reconciliation, three product areas, and admin analytics.  
+**Role:** Systems-level engineer, per the client: around a year on the membership and community platform covering performance, abuse prevention, billing reconciliation, three product areas, and admin analytics.  
 **Problem:** A growing membership and coaching platform needed to hold up under scale, with account sharing, geographic restrictions, and billing accuracy under control.  
-**Result:** In the client's words, the hard, systems-level work could be handed over with confidence, and the product shipped a lot over the engagement.  
+**Result:** A unified, multi-surface growth and community platform: 23 apps in one platform for 48,495+ community members, with 3-5 weekly live content sessions.  
+**Metric:** 48,495+ | community members | product  
+**Metric:** 23 | apps in one platform | product  
+**Metric:** 3-5 | weekly live content sessions | product  
 
 ## Overview
 
-Nothing Held Back (NHB) is a membership and coaching platform for entrepreneurs, built on Bubble.io. The product combines a content library, a resource hub, community forums, live coaching calls, and tiered paid membership into one workspace.
+Nothing Held Back (NHB) is a membership and coaching platform for entrepreneurs. The product combines a content library, a resource hub, community forums, live coaching calls, and tiered paid membership into one workspace.
 
 According to the client, Roman worked on NHB for around a year, brought in for the systems-level engineering behind the product rather than surface-level feature work.
 
@@ -33,13 +36,7 @@ According to the client, the engagement covered:
 
 ## Product outcomes & evidence
 
-The evidence for this case is the client's own account of the engagement:
-
-> "He shipped a lot in that time, but what I valued most was that we could hand him the hard, systems-level stuff and not worry about it."
-
-> "Roman is reliable, he thinks things through, and he's genuinely strong on the architecture side."
-
-Max Iver, Head of Design at Nothing Held Back
+The platform's reach and breadth lead the evidence: a large community, many apps in one platform, and live content every week. The client's review is supporting social proof.
 
 ![Client review](../assets/testimonials/max-iver-nhb.png)
 
@@ -52,7 +49,9 @@ Max Iver, Head of Design at Nothing Held Back
 
 ## System & architecture
 
-The product runs on Bubble.io. Based on the product's own navigation and screens, its surface includes:
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `APIs` `Automation` `AI integrations` `Google OAuth`
+
+The platform is built on Next.js and TypeScript with Supabase and PostgreSQL, and APIs, automation, and AI integrations connect its surfaces. Based on the product's own navigation and screens, its surface includes:
 
 - A home feed with platform updates, community stats, and personalized activity
 - A content library organized by coach and program
@@ -76,16 +75,23 @@ Preparing a live platform for a scaling push. The engagement began with a perfor
 
 ## Outcome
 
-Per the client, the engagement delivered a performance audit, account-sharing prevention, geo-blocking, billing reconciliation, redesigned and owned product areas, and a new admin analytics dashboard, with hard systems-level work handled reliably.
+NHB is a unified, multi-surface growth and community platform: 23 apps in one platform for 48,495+ community members, with 3-5 live content sessions every week. Per the client, the engagement delivered a performance audit, account-sharing prevention, geo-blocking, billing reconciliation, redesigned and owned product areas, and a new admin analytics dashboard, with hard systems-level work handled reliably. In the client's words:
+
+> "He shipped a lot in that time, but what I valued most was that we could hand him the hard, systems-level stuff and not worry about it."
+
+> "Roman is reliable, he thinks things through, and he's genuinely strong on the architecture side."
+
+Max Iver, Head of Design at Nothing Held Back
 
 ## What this demonstrates
 
+- A unified, multi-surface growth and community platform: library, resources, forums, live sessions, and membership tiers in one product
+- Platform scale: 48,495+ community members and 23 apps in one platform
 - Performance auditing and capacity planning under real scaling pressure
 - Abuse-prevention system design: account-sharing prevention and geo-blocking
 - Data reconciliation tooling with safety checks against destructive automation
-- Ownership of entire product surfaces rather than isolated tickets
-- Admin tooling built from scratch and root-cause debugging discipline
+- Ownership of entire product surfaces, admin tooling built from scratch, and root-cause debugging discipline
 
 ## Public portfolio note
 
-This case study is built only from product screenshots and a client testimonial provided directly, with no other source material (contracts, dates, internal documentation) available at the time of writing. Figures visible in the screenshots (for example member counts and content counts) reflect a single point in time and are not claimed as current.
+This case study is built from product screenshots, a client testimonial, and details provided by the owner, with no other source material (contracts, dates, internal documentation) available at the time of writing. Figures visible in the screenshots (for example member counts and content counts) reflect a single point in time and are not claimed as current.
