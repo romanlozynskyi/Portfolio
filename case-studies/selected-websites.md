@@ -2,7 +2,7 @@
 
 **Category:** Websites / Landing Pages / Conversion UX  
 **Source:** Public portfolio repository  
-**Role:** Positioning, responsive interfaces, trust signals, booking flows, calculators, service presentation, and bilingual content for five local business websites.  
+**Role:** Designed and built five sites: positioning, responsive interfaces, trust signals, booking flows, calculators, service presentation, and bilingual content.  
 **Problem:** A local business site has to help one specific customer make one specific decision, which a generic template does not do.  
 **Result:** Five live conversion-focused website concepts for Ukrainian local businesses, each built around its own customer decision.  
 

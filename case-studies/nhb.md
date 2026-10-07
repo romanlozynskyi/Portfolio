@@ -3,7 +3,7 @@
 **Category:** SaaS / Membership & Coaching Platform  
 **Stack:** Bubble.io  
 **Source code:** Private  
-**Role:** Systems-level engineering on a Bubble.io membership platform for around a year, per the client: performance, abuse prevention, billing reconciliation, three product areas, and admin analytics.  
+**Role:** Systems-level engineer, per the client: around a year on a Bubble.io membership platform covering performance, abuse prevention, billing reconciliation, three product areas, and admin analytics.  
 **Problem:** A growing membership and coaching platform needed to hold up under scale, with account sharing, geographic restrictions, and billing accuracy under control.  
 **Result:** In the client's words, the hard, systems-level work could be handed over with confidence, and the product shipped a lot over the engagement.  
 
