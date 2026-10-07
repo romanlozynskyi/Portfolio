@@ -1,4 +1,4 @@
-# AI Lead Scout
+# Universal Lead Scout
 
 **Category:** AI Agent / Research Automation / Lead Intelligence  
 **Status:** Active development  
@@ -15,7 +15,7 @@
 
 ## Overview
 
-AI Lead Scout is a campaign-oriented research agent that finds, verifies, and enriches leads.
+Universal Lead Scout is a campaign-oriented research agent that finds, verifies, and enriches leads.
 
 It keeps working across sources and batches until a campaign reaches the requested number of qualified, contactable leads, or the available sources run out.
 
@@ -29,7 +29,7 @@ The user is whoever runs a lead campaign and needs qualified, contactable leads.
 - Is this person the right decision-maker, and is the identity match reliable?
 - Is there a usable contact path and enough evidence to justify outreach?
 
-AI Lead Scout moves those checks into the research pipeline.
+Universal Lead Scout moves those checks into the research pipeline.
 
 ## My role & ownership
 

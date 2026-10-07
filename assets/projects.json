@@ -21,7 +21,7 @@
     "caseStudyPath": "case-studies/helpview.md",
     "hasAssets": true,
     "featured": true,
-    "featuredOrder": 3
+    "featuredOrder": 4
   },
   {
     "slug": "nhb",
@@ -29,16 +29,16 @@
     "caseStudyPath": "case-studies/nhb.md",
     "hasAssets": true,
     "featured": true,
-    "featuredOrder": 4,
+    "featuredOrder": 5,
     "note": "Case study drafted from client-provided screenshots and testimonial only — no live URL or dates beyond what's shown/stated were available."
   },
   {
     "slug": "ai-lead-scout",
-    "name": "AI Lead Scout",
+    "name": "Universal Lead Scout",
     "caseStudyPath": "case-studies/ai-lead-scout.md",
     "hasAssets": true,
     "featured": true,
-    "featuredOrder": 5,
+    "featuredOrder": 3,
     "note": "Cover is a provided pipeline/process graphic (assets/ai-lead-scout/cover), not a product screenshot."
   },
   {

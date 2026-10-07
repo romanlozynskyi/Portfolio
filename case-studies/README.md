@@ -8,9 +8,9 @@ Order follows [`../assets/projects.json`](../assets/projects.json), the canonica
 
 - [Loomenio](./loomenio.md)
 - [AstuteWheel](./astutewheel.md)
+- [Universal Lead Scout](./ai-lead-scout.md)
 - [Helpview](./helpview.md)
 - [Nothing Held Back (NHB)](./nhb.md)
-- [AI Lead Scout](./ai-lead-scout.md)
 - [AI Sleep Assistant](./ai-sleep-assistant.md)
 
 ## Additional case studies
