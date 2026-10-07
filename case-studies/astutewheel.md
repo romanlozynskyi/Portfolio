@@ -1,101 +1,110 @@
 # AstuteWheel
 
 **Category:** Production SaaS / CRM / Financial Planning  
-**Scale:** 120k+ users  
-**Work period:** Sep 2021 - Present  
+**Status:** Live  
+**Badge:** Financial SaaS  
 **Source code:** Private  
-**Role:** Long-term engineer on a mature production SaaS: system and database architecture, backend workflows, CRM operations, reporting, integrations, automation, and performance.  
-**Problem:** A mature financial planning SaaS accumulates years of workflows, data relationships, and integrations, so every change risks destabilizing the existing product.  
-**Result:** A platform used by 120k+ users, evolved over years without full rewrites, with the client singling out complex architecture, custom workflows, and API integrations.  
-**Metric:** 120k+ | users on the platform | product  
+**Role:** Senior Product Engineer responsible for evolving the product across architecture, data, permissions, financial workflows, integrations, automation, AI features, and production delivery.  
+**Problem:** A mature financial-planning SaaS and CRM had to keep evolving while preserving complex customer workflows, financial logic, data integrity, integrations, and production reliability.  
+**Result:** A mature production financial platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation.  
+**Metric:** 120k+ | active users | product  
+**Metric:** Live | mature financial-planning SaaS and CRM | product  
+**Metric:** Connected | workflows across financial planning, CRM, reporting, payments, documents, and automation | product  
+**Metric:** 10+ | production integrations | evidence | Stripe, DocuSign, SendGrid, Airtable, Google Sheets, Zapier, Make, and n8n  
+**Metric:** Next.js | production architecture | evidence | With TypeScript, Supabase, and PostgreSQL  
+**Metric:** OpenAI | ChatGPT integration in production | evidence | AI-enabled functionality inside the product  
+**Metric:** Production | permissions, relational data, reporting, automation, and troubleshooting | evidence  
 
 ## Overview
 
-AstuteWheel is a mature financial planning SaaS and CRM platform used by more than 120,000 users.
+AstuteWheel is a mature financial-planning SaaS and CRM platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation.
 
-My work has gone beyond the UI layer and covers system and database architecture, backend workflows, CRM operations, reporting, integrations, automation, performance optimization, and the ongoing evolution of a large production product.
+It runs on Next.js, TypeScript, Supabase, and PostgreSQL. My work spans architecture, data, permissions, workflows, integrations, AI features, and production delivery.
 
 ![AstuteWheel Scope of Advice](../assets/astutewheel/cover/scope-of-advice.png)
 
 ## Problem & users
 
-The platform serves financial advice practices: client engagement, advice delivery, and practice management run on one system. Years of use leave a large product with many workflows, data relationships, admin processes, reporting requirements, and integrations.
+The platform serves financial advice practices: client engagement, advice delivery, and practice management run on one system. A product at this stage cannot be paused or rebuilt from scratch, so it has to keep evolving while customers keep working:
 
-Work at this stage is less about adding isolated screens and more about making changes without destabilizing the existing product.
+- Complex customer workflows and financial logic must keep behaving the same way.
+- Data integrity and permissions must hold across CRM, reporting, payments, and documents.
+- New functionality has to fit established workflows instead of disrupting them.
 
 ![Client wellbeing and financial planning](../assets/astutewheel/screenshots/wellbeing.png)
 
 ## My role & ownership
 
-I have worked on this product since September 2021, with long-term ownership of these areas:
+I am the Senior Product Engineer responsible for evolving the product. The areas I own:
 
-- SaaS and CRM architecture
-- Database structure and data relationships
-- Backend workflow design and optimization
-- Client and operational workflows
-- Reporting, dashboards, and admin workflows
-- Subscription and billing logic
-- API integrations and automation
-- Performance optimization and long-term maintenance
+- Product architecture and the relational data model
+- Permissions and data integrity
+- Financial workflows, CRM operations, and reporting
+- Integrations and automation across payments, documents, email, spreadsheets, and workflow tools
+- AI-enabled features built on OpenAI/ChatGPT
+- Production delivery, reliability, and troubleshooting
 
 ![Dashboard](../assets/astutewheel/screenshots/dashboard.png)
 ![Client and operational workflows](../assets/astutewheel/screenshots/clients.png)
 
 ## Product outcomes & evidence
 
-The platform is used by 120k+ users, and the client describes the engagement in their own words:
-
-> "His depth of knowledge in Bubble has been invaluable, particularly in designing and building complex system architecture, custom workflows, and seamless API integrations."
-
-> "What stands out most is his ability to take a high-level idea and translate it into a practical, well-designed solution that supports both our business needs and long-term scalability."
-
-Andrew W., verified client
-
-![Client review](../assets/testimonials/andrew-w-astutewheel.png)
+Outcomes for the product, and the engineering evidence behind them.
 
 ## Product decisions
 
-On a platform at this stage, the typical decisions are about protecting what already works:
-
-- Preserve backwards-compatible behavior.
-- Understand downstream data effects before changing a workflow.
-- Avoid duplicate business logic.
-- Keep CRM and reporting data consistent.
-- Integrate external services safely.
-- Evolve features without breaking existing users.
+- Evolve, do not rewrite: improvements ship inside the live system without disrupting existing users, so each change is judged by what it could break as well as what it adds.
+- Established workflows first: new functionality is balanced against the workflows customers already depend on.
+- Data integrity and permissions by design: a relational data model and explicit permission rules keep CRM, reporting, and financial data consistent.
+- One source of business logic: duplicate logic across workflows and integrations is avoided, so behavior stays predictable.
+- Integrations chosen for the job: Stripe for payments, DocuSign for documents, SendGrid for email, Airtable and Google Sheets for data exchange, and Zapier, Make, and n8n for automation.
+- AI where it adds value: OpenAI/ChatGPT powers AI-enabled functionality inside the product.
+- Requirements into maintainable changes: business requirements are translated into product changes that stay maintainable in a large system.
 
 ## System & architecture
 
-The work covers the database structure, backend workflows, reporting, billing, and admin processes of a large production product, plus integrations and workflows involving services such as:
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `OpenAI/ChatGPT` `Stripe` `DocuSign` `SendGrid` `Airtable` `Google Sheets` `Zapier` `Make` `n8n`
 
-`Stripe` `DocuSign` `SendGrid` `Zapier` `Make` `n8n` `Airtable` `Google Sheets` `OpenAI` `Supabase`
+- Application: Next.js and TypeScript.
+- Data: Supabase and PostgreSQL, with a relational model and permission rules.
+- Integrations: payments, documents, email, spreadsheets, and automation tools, plus OpenAI/ChatGPT for AI features.
+- Product areas: financial planning, CRM operations, reporting and dashboards, billing logic, documents, and admin workflows.
 
 The exact production implementation and credentials remain private.
 
 ## Key challenge
 
-Evolving a large production system without breaking it. A platform with 120k+ users and years of accumulated data relationships needs improvements to slow workflows and heavy queries, consistent CRM and reporting data, and safe integrations, all while existing users keep working.
+Evolving a large live platform without disrupting the people using it. With 120k+ active users, years of accumulated workflows and data relationships, and integrations that touch payments, documents, and email, each change has to preserve established behavior, keep data consistent, and stay reliable in production.
 
 ![Complex data modeling: position detail](../assets/astutewheel/screenshots/position-detail.png)
 ![Client record detail](../assets/astutewheel/screenshots/personal-detail.png)
 
 ## Validation & production quality
 
-- At 120k+ users, performance, data integrity, maintainability, and operational clarity matter as much as feature delivery.
-- Slow workflows and heavy queries are improved as part of ongoing performance work.
-- The client credits consistent professionalism, problem-solving, and a strong commitment to quality outcomes.
+- Production reliability: at 120k+ active users, performance, data integrity, maintainability, and operational clarity matter as much as feature delivery.
+- Troubleshooting: production issues are traced to their cause across data, permissions, workflows, and integrations.
+- Consistency: CRM, reporting, and financial data stay consistent as the product changes.
+- Integrations: more than 10 production integrations are kept working alongside new functionality.
 
 ## Outcome
 
-AstuteWheel has been developed and maintained as a live production product since September 2021. It serves 120k+ users, and the client's account of the engagement centers on complex system architecture, custom workflows, seamless API integrations, and solutions that support long-term scalability.
+AstuteWheel is a mature live financial platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation, and it keeps evolving without full rewrites. In the client's words:
+
+> "What stands out most is his ability to take a high-level idea and translate it into a practical, well-designed solution that supports both our business needs and long-term scalability."
+
+> "He has consistently demonstrated professionalism, problem-solving skills, and a strong commitment to delivering quality outcomes."
+
+Andrew W., verified client
 
 ## What this demonstrates
 
-- Long-term ownership of a mature SaaS product
-- Production architecture and complex data modeling under real user scale
-- CRM operations, reporting, admin systems, and billing logic
-- API and automation integrations
-- Performance improvement and product evolution without full rewrites
+- Product decisions in a mature live system
+- Evolving architecture without disrupting existing users
+- Data integrity and permission design
+- Integration and automation decisions across payments, documents, email, and spreadsheets
+- AI-enabled functionality in production
+- Production reliability and troubleshooting
+- Translating business requirements into maintainable product changes
 
 ## Public portfolio note
 
