@@ -21,9 +21,9 @@ It keeps working across sources and batches until a campaign reaches the request
 
 ![Pipeline overview: sources, research, verification, enrichment, scoring, and qualified leads. The lead cards in the graphic are illustrative.](../assets/ai-lead-scout/cover/pipeline.png)
 
-## Problem
+## Problem & users
 
-Many lead tools stop after discovery. They return companies or contact records, and the user still has to answer the questions that matter:
+The user is whoever runs a lead campaign and needs qualified, contactable leads. Many lead tools stop after discovery: they return companies or contact records, and the user still has to answer the questions that matter:
 
 - Is the company active and relevant to the campaign?
 - Is this person the right decision-maker, and is the identity match reliable?
@@ -31,7 +31,29 @@ Many lead tools stop after discovery. They return companies or contact records, 
 
 AI Lead Scout moves those checks into the research pipeline.
 
-## What I built
+## My role & ownership
+
+I built the agent end to end. The areas I owned:
+
+- Campaign orchestration and campaign state
+- Source adapters and source routing, including cost policy
+- Company and identity verification
+- Contact enrichment, scoring, and deduplication
+- Automated tests
+
+## Product outcomes & evidence
+
+Evidence from a Bubble App Gallery campaign that produced 31 unique applications for enrichment.
+
+## Product decisions
+
+- Outcome-based campaigns: the agent runs until the target of qualified leads is met, not until one search stage finishes.
+- Conservative verification: a name match alone is not enough, and weak or unsafe matches are rejected instead of passed through.
+- Cheapest reliable source first: routing prefers official APIs and direct access before browser automation, search providers, and generic scraping.
+- Cost as a routing rule: a campaign can enforce zero incremental spend or require approval before a metered provider is used.
+- Capability and cost kept separate: a source marked as technically available cannot silently be treated as free.
+
+## System & architecture
 
 A campaign orchestrator drives source-specific adapters through one pipeline:
 
@@ -44,8 +66,6 @@ A campaign orchestrator drives source-specific adapters through one pipeline:
 7. Deduplicate across sources.
 8. Continue until the campaign target is reached or source capacity is exhausted.
 
-## Stack and architecture
-
 `TypeScript` `Playwright` `Exa` `Apify` `Web Research` `Automation` `Data Enrichment`
 
 Source routing prefers reliable, low-cost access and falls back only when needed:
@@ -57,18 +77,29 @@ Source routing prefers reliable, low-cost access and falls back only when needed
 5. Proven source-specific Apify Actors
 6. Generic scraping providers, only when necessary
 
-Cost is part of the routing logic. A campaign can enforce zero incremental spend or require approval before a metered provider is used.
+## Key challenge
 
-## Key decisions
+Telling real matches from false ones. A candidate is not strong simply because a name appears to match, so the agent looks for supporting evidence such as company role, product ownership, profile history, or current activity.
 
-- Campaigns are outcome-based: the agent runs until the target of qualified leads is met, not until one search stage finishes.
-- Verification is conservative: a name match alone is not enough. The agent looks for supporting evidence such as company role, product ownership, profile history, or current activity, and rejects false identity matches instead of passing them through.
-- Capability and cost are separate: a later architecture audit made sure a source marked as technically available cannot silently be treated as free.
+False identity matches are rejected instead of being silently passed through as leads. In the Bubble App Gallery campaign, 24 false identity matches were rejected during verification.
+
+## Validation & production quality
+
 - Automated tests cover source adapters, capability declarations, campaign behavior, cost policy, enrichment, and verification logic.
+- A later architecture audit separated provider capability from incremental cost.
+- A lead is counted only on evidence: verification rejects weak or unsafe matches before they reach the result.
 
-## Results and evidence
+## Outcome
 
-A Bubble App Gallery campaign produced 31 unique applications for enrichment. The important result is not the discovery count but the reduction from candidates to evidence-backed, usable leads: 27 were classified as contactable ICP leads, and 24 false identity matches were rejected during verification.
+In a Bubble App Gallery campaign, 31 unique applications were enriched: 30 were confirmed active, 23 had a verified founder or owner, and 27 were classified as contactable ICP leads. The result that matters is the reduction from candidates to evidence-backed, usable leads.
+
+## What this demonstrates
+
+- Multi-source agent orchestration with outcome-based campaign logic
+- Evidence-based verification of identity and contact data
+- Source routing with fallbacks and cost-aware execution
+- Deduplication and campaign state
+- Test-driven agent development
 
 ## Public portfolio note
 

@@ -17,11 +17,17 @@ It connects the client's existing GPT-based assistant to a customer-facing appli
 
 ![Chat interface. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/cover/chat.png)
 
-## Problem
+## Problem & users
 
-The client already had a GPT-based sleep assistant. What it lacked was a product around it: a clean chat experience, accounts, paid subscriptions, and a way to offer the assistant on the client's own WordPress site.
+The users are customers of a sleep consulting business who chat with its assistant. According to the client brief, these are parents asking about a child's sleep. The client already had a GPT-based sleep assistant. What it lacked was a product around it:
 
-## What I built
+- A clean chat experience that works on mobile and desktop.
+- Accounts and paid subscriptions, alongside a free mode.
+- A way to offer the assistant on the client's own WordPress site.
+
+## My role & ownership
+
+I built the application from scratch and delivered it as a live client application. The areas I owned:
 
 - Mobile-first chat interface, with guest access in free mode
 - Signup and login, with free and paid account states
@@ -32,9 +38,25 @@ The client already had a GPT-based sleep assistant. What it lacked was a product
 - Admin access for user management, documentation, and a Loom walkthrough
 
 ![Responsive chat on mobile, with login and widget views. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/mobile.png)
+![Account and subscription management. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/account.png)
+
+## Product outcomes & evidence
+
+The client later confirmed that the live app, the Bubble setup, and the Stripe flow were working well, and left a 5-star review.
+
+> "He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant."
+
+![Client review of the project, original screenshot.](../assets/testimonials/upwork-review-01-full.png)
+
+## Product decisions
+
+- Free mode comes first: users open the app and start chatting immediately, sign up only when they want paid features, then go straight to plan selection and Stripe checkout.
+- The widget stays separate from billing: the WordPress widget opens a smaller chat experience, while authentication and subscriptions stay in the main app.
+- Assistant logic stays with the client: per the client brief, the app passes each message and the user's free or paid status to the GPT and holds no sleep logic of its own.
+
 ![Free and paid plans. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/pricing.png)
 
-## Stack and architecture
+## System & architecture
 
 `Bubble` `OpenAI API` `Stripe` `WordPress`
 
@@ -44,22 +66,37 @@ The app coordinates three external layers:
 - Stripe for payment and subscription state
 - WordPress for embedded distribution
 
-## Key decisions
+## Key challenge
 
-- Free mode comes first: users open the app and start chatting immediately, sign up only when they want paid features, then go straight to plan selection and Stripe checkout.
-- The widget stays separate from billing: the WordPress widget opens a smaller chat experience, while authentication and subscriptions stay in the main app.
-- Subscription state stays consistent: payment status updates the same way regardless of where checkout was started.
-- Assistant logic stays with the client: per the client brief, the app passes each message and the user's free or paid status to the GPT and holds no sleep logic of its own.
+Keeping subscription state consistent wherever checkout starts. The work included aligning subscription flows so payment status updated the same way whether checkout began in the main app or elsewhere.
 
-![Account and subscription management. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/account.png)
+The public experience was designed to remove friction:
 
-## Results and evidence
+1. Open the app.
+2. Start chatting immediately in free mode.
+3. Sign up when the user wants paid functionality.
+4. Move directly into subscription selection after signup.
+5. Complete Stripe checkout.
+6. Update account status after successful payment.
+7. Continue with the paid assistant experience.
 
-The application was deployed live after end-to-end testing. The client later confirmed that the live app, the Bubble setup, and the Stripe flow were working well, and left a 5-star review.
+## Validation & production quality
 
-> "He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant."
+- The application was deployed live after end-to-end testing.
+- The client confirmed that the live app, the Bubble setup, and the Stripe flow were working well.
+- Documentation and a Loom walkthrough were handed over so the client can manage updates going forward.
 
-![Client review of the project, original screenshot.](../assets/testimonials/upwork-review-01-full.png)
+## Outcome
+
+AI Sleep Assistant went live as a client application with free and paid access, OpenAI-powered chat, Stripe subscriptions, and an embedded WordPress widget. The client left a 5-star review.
+
+## What this demonstrates
+
+- End-to-end delivery of an AI product, from scope to live launch
+- AI product integration with a client-owned assistant
+- Subscription logic and Stripe checkout with consistent state
+- Mobile-first chat UX and guest-to-paid conversion flows
+- Embeddable widgets and client handover
 
 ## Public portfolio note
 

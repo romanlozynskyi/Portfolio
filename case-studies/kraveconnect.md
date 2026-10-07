@@ -1,7 +1,9 @@
 # KraveConnect
 
-**Category:** Food Ordering Marketplace
-**Source code:** Private
+**Category:** Food Ordering Marketplace  
+**Source code:** Private  
+**Problem:** Local restaurants and customers need a simple way to connect for pickup orders.  
+**Result:** A pickup-only ordering flow with restaurant discovery, menus, and pair and group ordering.  
 
 ## Overview
 
@@ -9,15 +11,17 @@ KraveConnect (branded "KRAVE") is a Canadian food-ordering marketplace connectin
 
 ![Restaurant browse and discovery](../assets/kraveconnect/cover/browse.jpg)
 
-## Key areas
+## Problem & users
 
-- restaurant discovery by cuisine, category, and distance
-- individual restaurant menus with item pricing
-- pair and group ordering
-- account, favorites, and order history navigation
-- pickup-only ordering flow
+The users are local restaurants and the customers who order from them for pickup.
 
-## Screenshots
+## System & architecture
+
+- Restaurant discovery by cuisine, category, and distance
+- Individual restaurant menus with item pricing
+- Pair and group ordering
+- Account, favorites, and order history navigation
+- A pickup-only ordering flow
 
 ![Restaurant menu and ordering](../assets/kraveconnect/screenshots/menu.jpg)
 

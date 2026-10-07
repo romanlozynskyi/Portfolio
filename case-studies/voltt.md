@@ -2,32 +2,35 @@
 
 **Category:** Product Rebuild / Startup Platform  
 **Status:** In progress  
-**Source code:** Private
+**Source code:** Private  
+**Problem:** The current version reflects short-term prototype decisions, so the rebuild starts from architecture to support product growth.  
+**Result:** Rebuild in progress, with an early startup diagnostic dashboard already in place.  
 
-## Current stage
+## Overview
 
 Voltt is entering a rebuild phase. The work is being approached architecture-first so the new implementation can support product growth instead of reproducing short-term prototype decisions.
 
-An early build of the startup diagnostic dashboard is already in place, covering an overall readiness score, per-dimension diagnostics, a 7/30/90-day roadmap, an evidence tracker, and an AI coach panel.
-
 ![Startup diagnostic dashboard](../assets/voltt/cover/dashboard.jpg)
 
-## Portfolio approach
+## Problem & users
 
-This case study will be expanded as implementation starts. The public version will document decisions and outcomes without exposing the private production repository.
+The users are startup teams assessing their readiness. The product is a startup diagnostic platform, and its current version carries short-term prototype decisions that the rebuild is meant to leave behind.
 
-Planned areas to document:
+## Product decisions
 
-- product architecture
-- database model
-- workflow boundaries
-- authentication and permissions
+- Architecture first: the new implementation is designed to support product growth instead of reproducing prototype shortcuts.
+- Reasoning on record: an architecture log is kept from the beginning, so the final case study preserves the reasoning behind major product decisions instead of reconstructing them later.
+
+## System & architecture
+
+An early build of the startup diagnostic dashboard is already in place, covering an overall readiness score, per-dimension diagnostics, a 7/30/90-day roadmap, an evidence tracker, and an AI coach panel.
+
+## Outcome
+
+The rebuild is in progress. This case study will be expanded as implementation starts, documenting decisions and outcomes without exposing the private production repository. Planned areas to document:
+
+- Product architecture and database model
+- Workflow boundaries, authentication, and permissions
 - AI and API integration strategy
-- deployment architecture
-- scalability decisions
-- migration from the current version
-- milestone screenshots and release notes
-
-## Why it is included now
-
-Keeping an architecture log from the beginning makes the final case study stronger. It preserves the reasoning behind major product decisions instead of reconstructing them later.
+- Deployment architecture and scalability decisions
+- Migration from the current version, with milestone screenshots and release notes

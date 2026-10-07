@@ -1,64 +1,54 @@
 # Selected Local Business Websites
 
 **Category:** Websites / Landing Pages / Conversion UX  
-**Source:** Public portfolio repository
+**Source:** Public portfolio repository  
+**Role:** Positioning, responsive interfaces, trust signals, booking flows, calculators, service presentation, and bilingual content for five local business websites.  
+**Problem:** A local business site has to help one specific customer make one specific decision, which a generic template does not do.  
+**Result:** Five live conversion-focused website concepts for Ukrainian local businesses, each built around its own customer decision.  
 
 ## Overview
 
 A set of conversion-focused website concepts for Ukrainian local businesses. Each project is designed around a specific customer decision rather than a generic business template.
 
-The work covers positioning, responsive interfaces, trust signals, booking flows, calculators, service presentation, and bilingual content.
+![KVARC Detailing](../assets/websites/kvarc-detailing/cover/cover.jpg)
 
-## KVARC Detailing
+## Problem & users
 
-![KVARC Detailing](../src/content/cases/kvarc-detailing-kyiv/cover.jpg)
+The users are the customers of five different local businesses, each facing a different decision:
 
-**Live:** https://kvarc-detailing.vercel.app/
+- KVARC Detailing: which service package is worth the price.
+- Emal Dental: whether a first dental appointment feels safe and clear.
+- MALVA Beauty: which service, specialist, and time fit, without collecting information through direct messages.
+- RIVNO Renovation: whether a renovation company can be trusted with its price, payment stages, and terms.
+- POPIL Restaurant: whether the place is right, and a short way to book a table.
 
-A detailing website built around price clarity and service comparison. The experience includes package explanation, a price calculator, a before/after interaction, warranty messaging, and a fast booking path.
+## My role & ownership
 
-## Emal Dental
+I designed and built all five sites. The work covers positioning, responsive interfaces, trust signals, booking flows, calculators, service presentation, and bilingual content.
 
-![Emal Dental](../src/content/cases/emal-dental-kyiv/cover.jpg)
+## Product decisions
 
-**Live:** https://emal-dental-ten.vercel.app/
+- KVARC Detailing (kvarc-detailing.vercel.app): built around price clarity and service comparison, with package explanation, a price calculator, a before/after interaction, warranty messaging, and a fast booking path.
+- Emal Dental (emal-dental-ten.vercel.app): designed to reduce uncertainty before booking, with doctors, experience, pricing, treatment expectations, and a clear path to an initial appointment.
+- MALVA Beauty (malva-beauty-studio.vercel.app): brings services, prices, duration, specialist profiles, studio photos, and booking into one place.
+- RIVNO Renovation (rivno-renovation.vercel.app): focused on reducing trust barriers, with estimate logic, staged payment explanation, responsibility terms, comparison content, and a survey request flow.
+- POPIL Restaurant (popil-restaurant.vercel.app): focused on atmosphere, concept, menu storytelling, chef positioning, and a short table booking flow.
 
-A dental clinic website designed to reduce uncertainty before booking. It surfaces doctors, experience, pricing, treatment expectations, and a clear path to an initial appointment.
+![Emal Dental](../assets/websites/emal-dental/cover/cover.jpg)
+![MALVA Beauty](../assets/websites/malva-beauty/cover/cover.jpg)
+![RIVNO Renovation](../assets/websites/rivno-renovation/cover/cover.jpg)
+![POPIL Restaurant](../assets/websites/popil-restaurant/cover/cover.jpg)
 
-## MALVA Beauty
+## System & architecture
 
-![MALVA Beauty](../src/content/cases/malva-beauty-kyiv/cover.jpg)
+`Next.js` `React` `TypeScript` `Tailwind CSS`
 
-**Live:** https://malva-beauty-studio.vercel.app/
+The five sites are independent projects, each with its own concept, brand, copywriting, and visuals. They share the same approach: responsive layouts, bilingual content, SEO and structured data setup, and custom client components for calculators, sliders, and booking flows.
 
-A beauty studio website that brings services, prices, duration, specialist profiles, studio photos, and booking into one place so users do not need to collect information through direct messages.
-
-## RIVNO Renovation
-
-![RIVNO Renovation](../src/content/cases/rivno-renovation-kyiv/cover.jpg)
-
-**Live:** https://rivno-renovation.vercel.app/
-
-A renovation company website focused on reducing trust barriers. It includes estimate logic, staged payment explanation, responsibility terms, comparison content, and a survey request flow.
-
-## POPIL Restaurant
-
-![POPIL Restaurant](../src/content/cases/popil-restaurant-kyiv/cover.jpg)
-
-**Live:** https://popil-restaurant.vercel.app/
-
-A restaurant site focused on atmosphere, concept, menu storytelling, chef positioning, and a short table booking flow.
-
-## Stack
-
-The public portfolio implementation uses `Astro` and `Tailwind CSS`, with bilingual case content, responsive layouts, SEO setup, and structured case data.
-
-## What this collection demonstrates
+## What this demonstrates
 
 - Conversion-focused information architecture
-- Responsive website development
-- Bilingual content structure
-- Service business positioning
+- Responsive website development with bilingual content
+- Service business positioning and trust signals
 - Booking and lead flows
 - Interactive calculators and decision support
-- Reusable content-driven site architecture

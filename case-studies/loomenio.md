@@ -2,134 +2,113 @@
 
 **Category:** AI-first SaaS / Inventory / Production Operations  
 **Live:** https://app.loomenio.com  
-**Source code:** Private
+**Source code:** Private  
+**Role:** Product engineer: designed and built the architecture, data model, permissions, inventory and production logic, AI workflows, integrations, and the responsive experience.  
+**Problem:** Small-batch makers keep inventory, recipes, suppliers, and production in disconnected tools, so what needs attention next is never obvious.  
+**Result:** 50% faster operational data capture, 30% fewer manual corrections, and under a minute to identify the next operational priority.  
+**Metric:** 50% | faster operational data capture | product  
+**Metric:** 30% | fewer manual corrections | product  
+**Metric:** Under 1 min | to identify the next operational priority | product  
+**Metric:** 98.6% | operation-type accuracy in the live evaluation | evidence  
+**Metric:** 100% | entity accuracy for auto-filled entities | evidence  
+**Metric:** 1,491 | automated tests | evidence  
+**Metric:** 85 | cases in the live evaluation | evidence  
 
 ## Overview
 
 Loomenio is an operations platform for small-batch manufacturers. It brings inventory, recipes, production, sales, suppliers, imports, integrations, and operational decision support into one product.
 
-The product is built around a simple idea: the application should help a maker understand what needs attention next without handing critical business logic to an LLM.
+The product is built around one idea: the application should help a maker understand what needs attention next, without handing critical business logic to an LLM.
 
-![Loomenio Today](../assets/loomenio/cover/today.png)
+![Today, the operational recommendation view](../assets/loomenio/cover/today.png)
 
-## Screenshots
+## Problem & users
 
-![AI-assisted data capture](../assets/loomenio/screenshots/ai-capture.png)
-![Products and recipes](../assets/loomenio/screenshots/products.png)
+The users are small-batch makers and manufacturers, working in shared workspaces with different roles. Their inventory, recipes, supplier prices, and production usually live in separate spreadsheets, email threads, and memory. Each number is real, but none of them talk to each other, so the next action is never obvious.
+
+The product therefore had to do three things:
+
+- Capture operational data without slow, error-prone manual entry.
+- Show the next operational priority without a manual review of spreadsheets.
+- Keep inventory, costing, and permissions correct and auditable.
+
+## My role & ownership
+
+I designed and built the product end to end. The areas I owned:
+
+- Product architecture and the multi-workspace data model
+- Role-based access and row-level security
+- Inventory transactions, production, and recipe logic
+- AI-assisted workflows, including AI Capture and the explanations in Today
+- Integrations and analytics foundations
+- The responsive application experience
+
+## Product outcomes & evidence
+
+Outcomes for the product, and the AI and engineering evidence behind them.
+
+## Product decisions
+
+- Controlled AI: AI interprets user input and explains system output. Inventory, costing, permissions, and production decisions stay deterministic and auditable.
+- Explicit confirmation: the user confirms a structured proposal before any change is applied, and ambiguity goes to review instead of being guessed.
+- Recommendations from math, not from a model: Today uses deterministic calculations for demand rate, stock cover, reorder points, reorder quantities, and margin-related decisions. The LLM only translates or explains them.
+- Workspaces first: accounts can belong to several workspaces, with workspace membership and role-based permissions deciding what each person can do.
+- Records over overwrites: sales support reversals, and inventory changes are kept as a transaction history.
+- Review over silent fixes: unclear or mismatched units are routed to review instead of silently applying bad quantities.
+
 ![Sales and reversals](../assets/loomenio/screenshots/sales.png)
-![CSV import](../assets/loomenio/screenshots/import.png)
 
-## My role
+## System & architecture
 
-I designed and built the product architecture, data model, permissions, inventory and production logic, AI-assisted workflows, integrations, analytics foundations, and responsive application experience.
-
-## Product architecture
-
-```mermaid
-flowchart TB
-    U[Workspace user] --> W[Next.js application]
-    W --> A[Application services]
-    A --> S[(Supabase / PostgreSQL)]
-    S --> R[RLS workspace isolation]
-    A --> I[Inventory transactions]
-    A --> P[Production and recipes]
-    A --> O[Orders and suppliers]
-    A --> X[External integrations]
-    A --> N[Notifications]
-    A --> T[Today recommendations]
-    A --> C[AI Capture]
-    C --> V[Structured draft + validation]
-    V --> Q[User confirmation]
-    Q --> A
-```
-
-## Core product areas
-
-- Materials and SKU management
-- Products and recipes
-- Production workflows
-- Sales and reversals
-- Inventory transaction history
-- Suppliers and purchase orders
-- CSV import
-- Multi-workspace accounts
-- Role-based access
-- Notifications
-- External integrations
-- Operational recommendations
-- AI-assisted data capture
-
-## Architecture
-
-Loomenio uses a multi-workspace SaaS model with workspace membership and role-based permissions.
-
-The application stack includes:
+Loomenio is a multi-workspace SaaS application.
 
 `Next.js` `TypeScript` `Supabase` `PostgreSQL` `RLS` `Vercel`
 
-Database security and workspace isolation are enforced with row-level security. Critical operations are validated through the application and database instead of being delegated directly to AI.
+- Application: a Next.js application with services for inventory transactions, production and recipes, orders and suppliers, external integrations, notifications, Today recommendations, and AI Capture.
+- Data: Supabase and PostgreSQL, with row-level security enforcing workspace isolation.
+- Validation boundary: critical operations are validated in the application and the database, not delegated to AI.
+- Product areas: materials and SKUs, products and recipes, production workflows, sales and reversals, inventory transaction history, suppliers and purchase orders, CSV import, notifications, external integrations, and operational recommendations.
 
-## AI Capture
+![Products and recipes](../assets/loomenio/screenshots/products.png)
 
-AI Capture converts messy user input into structured operational drafts that can be reviewed before being applied.
+## Key challenge
 
-```mermaid
-flowchart LR
-    A[Messy user input] --> B[AI interpretation]
-    B --> C[Operation draft]
-    C --> D[Entity and unit resolution]
-    D --> E{Clear and valid?}
-    E -- No --> F[Needs review]
-    E -- Yes --> G[Structured proposal]
-    F --> G
-    G --> H[User confirmation]
-    H --> I[Deterministic application logic]
-    I --> J[(Database transaction)]
-```
-
-The workflow includes:
+Real input is messy, while inventory and costing must stay exact. AI Capture turns messy user input into structured operational drafts that can be reviewed before they are applied.
 
 1. Parse user input.
-2. Detect operation type.
+2. Detect the operation type.
 3. Resolve entities and units.
 4. Preserve totals and cost semantics.
 5. Route ambiguity to review.
 6. Build a structured proposal.
 7. Require confirmation before applying changes.
 
-The production logic stays deterministic. AI interprets the input, but database updates and business rules remain controlled by application logic.
+AI interprets the input. Database updates and business rules stay under deterministic application logic.
 
-Live evaluation reached 98.6% operation-type accuracy across an 85-case evaluation set, with 100% entity accuracy for auto-filled entities in that evaluation.
+![AI-assisted data capture](../assets/loomenio/screenshots/ai-capture.png)
 
-## Today
+## Validation & production quality
 
-Today is the operational recommendation layer. It uses deterministic calculations for demand rate, stock cover, reorder points, reorder quantities, and margin-related decisions.
+- Live evaluation: an 85-case evaluation set reached 98.6% operation-type accuracy, with 100% entity accuracy for auto-filled entities.
+- Automated tests: 1,491 automated tests cover the product.
+- Imports: the import system handles structured data while enforcing uniqueness and validation.
+- Units: AI-assisted input resolves compatible units and routes unclear or mismatched units to review.
+- Data isolation: row-level security keeps each workspace's data separate, and critical operations are validated in both the application and the database.
 
-The LLM is not the source of truth. It translates or explains recommendations, while the underlying math is calculated by deterministic product logic.
+![CSV import](../assets/loomenio/screenshots/import.png)
 
-## Imports and units
+## Outcome
 
-The import system handles structured data while enforcing uniqueness and validation. AI-assisted input also resolves compatible units and routes unclear or mismatched units to review instead of silently applying bad quantities.
+Loomenio is live as a production product. It delivers 50% faster operational data capture, 30% fewer manual corrections, and under a minute to identify the next operational priority. The AI workflow reached 98.6% operation-type accuracy in live evaluation while business-critical logic stays deterministic, and the product is covered by 1,491 automated tests.
 
-## Product principle
+## What this demonstrates
 
-The central design principle is controlled AI:
-
-> AI can interpret user input and explain system output. Inventory, costing, permissions, and production decisions stay deterministic and auditable.
-
-## What this case demonstrates
-
-- SaaS product architecture
-- Multi-tenant data modeling
-- Row-level security
-- Inventory transaction design
-- Production and recipe logic
-- AI-assisted structured capture
-- Deterministic recommendation systems
-- Validation and confirmation boundaries
-- Integrations and entitlement logic
-- Responsive product delivery
-- Large automated test coverage
+- End-to-end product ownership: from problem framing and data model to AI workflows and the responsive interface.
+- Production SaaS architecture: a multi-workspace model, application services, and a validated data layer.
+- AI with deterministic safeguards: AI interprets, deterministic logic decides, and the user confirms.
+- Relational data and permissions: transaction history, role-based access, and row-level security.
+- Evaluation and testing: a live evaluation set and a large automated test suite.
+- Product decisions under real operational constraints: messy input, exact inventory and costing, and small-team workflows.
 
 ## Public portfolio note
 
