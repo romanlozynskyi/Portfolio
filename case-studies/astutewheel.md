@@ -8,12 +8,7 @@
 **Problem:** A mature financial-planning SaaS and CRM had to keep evolving while preserving complex customer workflows, financial logic, data integrity, integrations, and production reliability.  
 **Result:** A mature production financial platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation.  
 **Metric:** 120k+ | active users | product  
-**Metric:** Live | mature financial-planning SaaS and CRM | product  
-**Metric:** Connected | workflows across financial planning, CRM, reporting, payments, documents, and automation | product  
-**Metric:** 10+ | production integrations | evidence | Stripe, DocuSign, SendGrid, Airtable, Google Sheets, Zapier, Make, and n8n  
-**Metric:** Next.js | production architecture | evidence | With TypeScript, Supabase, and PostgreSQL  
-**Metric:** OpenAI | ChatGPT integration in production | evidence | AI-enabled functionality inside the product  
-**Metric:** Production | permissions, relational data, reporting, automation, and troubleshooting | evidence  
+**Metric:** 10+ | production integrations | evidence | Payments, documents, email, spreadsheets, workflow automation, and AI  
 
 ## Overview
 
@@ -50,6 +45,8 @@ I am the Senior Product Engineer responsible for evolving the product. The areas
 ## Product outcomes & evidence
 
 Outcomes for the product, and the engineering evidence behind them.
+
+AstuteWheel is a live, mature financial-planning SaaS and CRM with connected workflows across financial planning, CRM, reporting, payments, documents, and automation. Production permissions, relational data, reporting, automation, and troubleshooting are part of everyday delivery, and the stack and integrations behind them are described under System & architecture.
 
 ## Product decisions
 
@@ -95,6 +92,8 @@ AstuteWheel is a mature live financial platform serving 120k+ active users acros
 > "He has consistently demonstrated professionalism, problem-solving skills, and a strong commitment to delivering quality outcomes."
 
 Andrew W., verified client
+
+![Client review](../assets/testimonials/andrew-w-astutewheel.png)
 
 ## What this demonstrates
 
