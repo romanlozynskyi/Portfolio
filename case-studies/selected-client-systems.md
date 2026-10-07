@@ -5,7 +5,7 @@
 
 ## Overview
 
-These projects are supporting examples of workflow-heavy SaaS and internal business systems. They are not positioned as the primary featured work, but they show breadth across operational products.
+Supporting examples of workflow-heavy SaaS and internal business systems, showing breadth across operational products.
 
 ![Impact management dashboard](../assets/instrumento/cover/dashboard.jpg)
 

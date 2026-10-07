@@ -21,7 +21,6 @@ Not featured, but published and browsable by category.
 - [Selected Client Systems](./selected-client-systems.md)
 - [MetaClinic](./metaclinic.md)
 - [Cheers](./cheers-contracts.md)
-- [KraveConnect](./kraveconnect.md)
 - [Voltt](./voltt.md)
 
 The case studies focus on the problem, architecture, workflows, technical decisions, delivery, and evidence. Proprietary implementation details, credentials, customer data, and production source code are intentionally excluded.

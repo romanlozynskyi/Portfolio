@@ -8,7 +8,7 @@
 **Role:** Senior Product Engineer responsible for evolving the product across architecture, data, permissions, financial workflows, integrations, automation, AI features, and production delivery.  
 **Problem:** A mature financial-planning SaaS and CRM had to keep evolving while preserving complex customer workflows, financial logic, data integrity, integrations, and production reliability.  
 **Result:** A mature production financial platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation.  
-**Metric:** 120k+ | active users | product  
+**Metric:** 120k+ | active users on the platform | product | Product scale  
 **Metric:** 10+ | production integrations | evidence | Payments, documents, email, spreadsheets, workflow automation, and AI  
 
 ## Overview
@@ -94,7 +94,7 @@ AstuteWheel is a mature live financial platform serving 120k+ active users acros
 
 Andrew W., verified client
 
-![Client review](../assets/testimonials/andrew-w-astutewheel.png)
+![Client review (original screenshot). This testimonial refers to an earlier version of the product. The case study above describes the current implementation and architecture.](../assets/testimonials/andrew-w-astutewheel.png)
 
 ## What this demonstrates
 

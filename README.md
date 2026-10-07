@@ -17,7 +17,7 @@ Order below follows [`assets/projects.json`](./assets/projects.json), the canoni
 | Nothing Held Back (NHB) | Membership and community platform: library, resources, forums, live sessions | [Case study](./case-studies/nhb.md) |
 | AI Sleep Assistant | OpenAI, Stripe, subscriptions, embedded widget | [Case study](./case-studies/ai-sleep-assistant.md)<br>[Live](https://kim-sleep-assistant-62596.bubbleapps.io/) |
 
-Additional, non-featured case studies: [Wikipedia Pageview Insights](./case-studies/wikipedia-pageview-insights.md) ([source](https://github.com/romanlozynskyi/wikipedia-pageview-insights)), [Selected Websites](./case-studies/selected-websites.md), [Selected Client Systems](./case-studies/selected-client-systems.md), [MetaClinic](./case-studies/metaclinic.md), [Cheers](./case-studies/cheers-contracts.md), [KraveConnect](./case-studies/kraveconnect.md), [Voltt](./case-studies/voltt.md).
+Additional, non-featured case studies: [Wikipedia Pageview Insights](./case-studies/wikipedia-pageview-insights.md) ([source](https://github.com/romanlozynskyi/wikipedia-pageview-insights)), [Selected Websites](./case-studies/selected-websites.md), [Selected Client Systems](./case-studies/selected-client-systems.md), [MetaClinic](./case-studies/metaclinic.md), [Cheers](./case-studies/cheers-contracts.md), [Voltt](./case-studies/voltt.md).
 
 ## How these case studies are presented
 

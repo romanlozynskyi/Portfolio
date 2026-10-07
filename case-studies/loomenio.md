@@ -9,8 +9,8 @@
 **Metric:** 50% | faster operational data capture | product  
 **Metric:** 30% | fewer manual corrections | product  
 **Metric:** Under 1 min | to identify the next operational priority | product  
-**Metric:** 98.6% | operation-type accuracy in the live evaluation | evidence  
-**Metric:** 100% | entity accuracy for auto-filled entities | evidence  
+**Metric:** 98.6% | operation-type accuracy | evidence | 85-case live evaluation  
+**Metric:** 100% | entity accuracy for auto-filled entities | evidence | 85-case live evaluation  
 **Metric:** 1,491 | automated tests | evidence  
 **Metric:** 85 | cases in the live evaluation | evidence  
 

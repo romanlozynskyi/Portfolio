@@ -1,9 +1,11 @@
 # Nothing Held Back (NHB)
 
 **Category:** SaaS / Membership & Coaching Platform  
-**Live:** https://www.nothingheldback.com/  
+**Live:** https://app.nothingheldback.com/login  
+**Live label:** Open live app  
+**Website:** https://www.nothingheldback.com/  
 **Source code:** Private  
-**Role:** Systems-level engineer, per the client: around a year on the membership and community platform covering performance, abuse prevention, billing reconciliation, three product areas, and admin analytics.  
+**Role:** Systems-level engineer: around a year on the membership and community platform, covering performance, abuse prevention, billing reconciliation, three product areas, and admin analytics.  
 **Problem:** A growing membership and coaching platform needed to hold up under scale, with account sharing, geographic restrictions, and billing accuracy under control.  
 **Result:** A unified, multi-surface growth and community platform: 23 apps in one platform for 48,495+ community members, with 3-5 weekly live content sessions.  
 **Metric:** 48,495+ | community members | product  
@@ -14,17 +16,17 @@
 
 Nothing Held Back (NHB) is a membership and coaching platform for entrepreneurs. The product combines a content library, a resource hub, community forums, live coaching calls, and tiered paid membership into one workspace.
 
-According to the client, Roman worked on NHB for around a year, brought in for the systems-level engineering behind the product rather than surface-level feature work.
+I worked on NHB for around a year, brought in for the systems-level engineering behind the product rather than surface-level feature work.
 
 ![NHB Home dashboard](../assets/nhb/cover/home-dashboard.png)
 
 ## Problem & users
 
-The users are entrepreneurs who join as members, from free community access up to paid plans, and the coaches who run programs for them. As the client describes the engagement, the platform faced a scaling push and the problems that come with it: heavy capacity drains, shared accounts, geographic restrictions, and subscription records that had to match the database.
+The users are entrepreneurs who join as members, from free community access up to paid plans, and the coaches who run programs for them. The platform faced a scaling push and the problems that come with it: heavy capacity drains, shared accounts, geographic restrictions, and subscription records that had to match the database.
 
 ## My role & ownership
 
-According to the client, the engagement covered:
+The engagement covered:
 
 - Ownership of the Library, Resources, and Fast Feedback areas of the product, including a full Fast Feedback redesign
 - An admin analytics dashboard built from scratch
@@ -38,7 +40,7 @@ According to the client, the engagement covered:
 
 The platform's reach and breadth lead the evidence: a large community, many apps in one platform, and live content every week. The client's review is supporting social proof.
 
-![Client review](../assets/testimonials/max-iver-nhb.png)
+![Client review (original screenshot). This testimonial refers to an earlier version of the product. The case study above describes the current implementation and architecture.](../assets/testimonials/max-iver-nhb.png)
 
 ## Product decisions
 
@@ -75,7 +77,7 @@ Preparing a live platform for a scaling push. The engagement began with a perfor
 
 ## Outcome
 
-NHB is a unified, multi-surface growth and community platform: 23 apps in one platform for 48,495+ community members, with 3-5 live content sessions every week. Per the client, the engagement delivered a performance audit, account-sharing prevention, geo-blocking, billing reconciliation, redesigned and owned product areas, and a new admin analytics dashboard, with hard systems-level work handled reliably. In the client's words:
+NHB is a unified, multi-surface growth and community platform: 23 apps in one platform for 48,495+ community members, with 3-5 live content sessions every week. The engagement delivered a performance audit, account-sharing prevention, geo-blocking, billing reconciliation, redesigned and owned product areas, and a new admin analytics dashboard, with hard systems-level work handled reliably. In the client's words:
 
 > "He shipped a lot in that time, but what I valued most was that we could hand him the hard, systems-level stuff and not worry about it."
 
@@ -94,4 +96,4 @@ Max Iver, Head of Design at Nothing Held Back
 
 ## Public portfolio note
 
-This case study is built from product screenshots, a client testimonial, and details provided by the owner, with no other source material (contracts, dates, internal documentation) available at the time of writing. Figures visible in the screenshots (for example member counts and content counts) reflect a single point in time and are not claimed as current.
+Figures visible in the screenshots (for example member counts and content counts) reflect a single point in time and are not claimed as current. Source code, customer data, and internal implementation details are not public.

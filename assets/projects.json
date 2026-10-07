@@ -93,7 +93,8 @@
     "hasAssets": true,
     "featured": false,
     "featuredOrder": null,
-    "note": "Added from screenshots only, no written brief — role, stack, and outcome are unconfirmed. Restaurant business listings (name/address/phone) kept as the product's own directory content, not third-party PII."
+    "note": "Not published: role, stack, and ownership are unconfirmed. Set published to true (and add a confirmed role) to show it again.",
+    "published": false
   },
   {
     "slug": "voltt",

@@ -19,7 +19,7 @@ It connects the client's existing GPT-based assistant to a customer-facing appli
 
 ## Problem & users
 
-The users are customers of a sleep consulting business who chat with its assistant. According to the client brief, these are parents asking about a child's sleep. The client already had a GPT-based sleep assistant. What it lacked was a product around it:
+The users are customers of a sleep consulting business who chat with its assistant. They are mainly parents asking about a child's sleep. The client already had a GPT-based sleep assistant. What it lacked was a product around it:
 
 - A clean chat experience that works on mobile and desktop.
 - Accounts and paid subscriptions, alongside a free mode.
@@ -52,7 +52,7 @@ The client later confirmed that the live app, the Bubble setup, and the Stripe f
 
 - Free mode comes first: users open the app and start chatting immediately, sign up only when they want paid features, then go straight to plan selection and Stripe checkout.
 - The widget stays separate from billing: the WordPress widget opens a smaller chat experience, while authentication and subscriptions stay in the main app.
-- Assistant logic stays with the client: per the client brief, the app passes each message and the user's free or paid status to the GPT and holds no sleep logic of its own.
+- Assistant logic stays with the client: the app passes each message and the user's free or paid status to the client's GPT, which handles the sleep guidance, and holds no sleep logic of its own.
 
 ![Free and paid plans. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/pricing.png)
 
