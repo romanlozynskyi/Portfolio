@@ -13,49 +13,33 @@
 
 ## Overview
 
-AstuteWheel is a mature financial-planning SaaS and CRM platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation.
+AstuteWheel is a mature, live financial-planning SaaS and CRM platform with 120k+ active users, used by financial advice practices for client engagement, advice delivery, and practice management.
 
-It runs on Next.js, TypeScript, Supabase, and PostgreSQL. My work spans architecture, data, permissions, workflows, integrations, AI features, and production delivery.
+As Senior Product Engineer in a small team, I own the architecture, integrations, workflows, permissions, data integrity, and safe production changes that let the platform keep evolving while customers keep working.
+
+- Architecture and the relational data model, with five distinct user roles and their permissions
+- Integrations and automation across payments, documents, email, spreadsheets, and workflow tools
+- Financial workflows, CRM operations, reporting, and AI-enabled features
+- Production delivery, reliability, and safe changes to a live system
 
 ![AstuteWheel Scope of Advice](../assets/astutewheel/cover/scope-of-advice.png)
-
-The platform serves financial advice practices: client engagement, advice delivery, and practice management run on one system. A product at this stage cannot be paused or rebuilt from scratch, so it has to keep evolving while customers keep working:
-
-- Complex customer workflows and financial logic must keep behaving the same way.
-- Data integrity and permissions must hold across CRM, reporting, payments, and documents.
-- New functionality has to fit established workflows instead of disrupting them.
-
-![Client wellbeing and financial planning](../assets/astutewheel/screenshots/wellbeing.png)
-
-I am the Senior Product Engineer responsible for evolving the product. The areas I own:
-
-- Product architecture and the relational data model
-- Permissions and data integrity
-- Financial workflows, CRM operations, and reporting
-- Integrations and automation across payments, documents, email, spreadsheets, and workflow tools
-- AI-enabled features built on OpenAI/ChatGPT
-- Production delivery, reliability, and troubleshooting
-
 ![Dashboard](../assets/astutewheel/screenshots/dashboard.png)
 ![Client and operational workflows](../assets/astutewheel/screenshots/clients.png)
+![Client wellbeing and financial planning](../assets/astutewheel/screenshots/wellbeing.png)
 
 ## Product outcomes & evidence
 
 Outcomes for the product, and the engineering evidence behind them.
 
-AstuteWheel is a live, mature financial-planning SaaS and CRM with connected workflows across financial planning, CRM, reporting, payments, documents, and automation. Production permissions, relational data, reporting, automation, and troubleshooting are part of everyday delivery, and the stack and integrations behind them are described under System & architecture.
+The 120k+ active users are the scale of the platform I help evolve, not a number I claim alone. The 10+ production integrations show the engineering scope: payments, documents, email, spreadsheets, workflow automation, and AI, kept working inside a live system.
 
 ## Key product & engineering decisions
 
-- Evolve, do not rewrite: improvements ship inside the live system without disrupting existing users, so each change is judged by what it could break as well as what it adds.
-- Established workflows first: new functionality is balanced against the workflows customers already depend on.
-- Data integrity and permissions by design: a relational data model and explicit permission rules keep CRM, reporting, and financial data consistent.
-- One source of business logic: duplicate logic across workflows and integrations is avoided, so behavior stays predictable.
-- Integrations chosen for the job: Stripe for payments, DocuSign for documents, SendGrid for email, Airtable and Google Sheets for data exchange, and Zapier, Make, and n8n for automation.
+- Safe changes in a live system: improvements ship inside the live platform without disrupting existing users, so each change is judged by what it could break as well as what it adds.
+- Integration architecture: payments, documents, email, spreadsheets, and automation tools are integrated for each job, and duplicated logic across workflows and integrations is avoided so behavior stays predictable.
+- Permissions and access control: five distinct user roles have their own permissions, dashboards, workflows, and data access, governed by explicit permission rules.
+- Data consistency and workflow reliability: a relational data model keeps CRM, reporting, and financial data consistent, and new functionality is balanced against the workflows customers already depend on.
 - AI where it adds value: OpenAI/ChatGPT powers AI-enabled functionality inside the product.
-- Requirements into maintainable changes: business requirements are translated into product changes that stay maintainable in a large system.
-
-Evolving a large live platform without disrupting the people using it. With 120k+ active users, years of accumulated workflows and data relationships, and integrations that touch payments, documents, and email, each change has to preserve established behavior, keep data consistent, and stay reliable in production.
 
 ![Complex data modeling: position detail](../assets/astutewheel/screenshots/position-detail.png)
 ![Client record detail](../assets/astutewheel/screenshots/personal-detail.png)
@@ -64,23 +48,28 @@ Evolving a large live platform without disrupting the people using it. With 120k
 
 `Next.js` `TypeScript` `Supabase` `PostgreSQL` `OpenAI/ChatGPT` `Stripe` `DocuSign` `SendGrid` `Airtable` `Google Sheets` `Zapier` `Make` `n8n`
 
-- Application: Next.js and TypeScript.
-- Data: Supabase and PostgreSQL, with a relational model and permission rules.
-- Integrations: payments, documents, email, spreadsheets, and automation tools, plus OpenAI/ChatGPT for AI features.
-- Product areas: financial planning, CRM operations, reporting and dashboards, billing logic, documents, and admin workflows.
+- Application layer: Next.js and TypeScript, covering financial planning, CRM operations, reporting and dashboards, billing logic, documents, and admin workflows.
+- Data layer: Supabase and PostgreSQL, with a relational model for structured financial and business data.
+- Permissions and access: five distinct user roles with different permissions, dashboards, workflows, and data access.
+- Integrations: Stripe for payments, DocuSign for documents, SendGrid for email, and Airtable and Google Sheets for data exchange.
+- Automation and AI: Zapier, Make, and n8n for workflow automation, and OpenAI/ChatGPT for AI-enabled features.
+- Production: changes ship into the live platform, with performance, capacity, and troubleshooting part of everyday delivery.
 
 The exact production implementation and credentials remain private.
 
 ## Validation & production quality
 
-- Production reliability: at 120k+ active users, performance, data integrity, maintainability, and operational clarity matter as much as feature delivery.
+- Production reliability: performance and capacity work and production support keep a platform of this scale dependable.
 - Troubleshooting: production issues are traced to their cause across data, permissions, workflows, and integrations.
-- Consistency: CRM, reporting, and financial data stay consistent as the product changes.
-- Integrations: more than 10 production integrations are kept working alongside new functionality.
+- Permissions and data consistency: CRM, reporting, and financial data stay consistent as the product changes, across roles with different access.
+- Integration upkeep: more than 10 production integrations are kept working alongside new functionality.
+- Database health: database architecture and optimization are part of keeping the platform performant.
 
 ## Outcome
 
-AstuteWheel is a mature live financial platform serving 120k+ active users across financial planning, CRM, reporting, payments, documents, integrations, and automation, and it keeps evolving without full rewrites. In the client's words:
+AstuteWheel keeps evolving in production without full rewrites, with its workflows, data, and integrations staying consistent for the practices that depend on it.
+
+In the client's words:
 
 > "What stands out most is his ability to take a high-level idea and translate it into a practical, well-designed solution that supports both our business needs and long-term scalability."
 
@@ -88,15 +77,15 @@ AstuteWheel is a mature live financial platform serving 120k+ active users acros
 
 Andrew W., verified client
 
-![Client review (original screenshot). This testimonial refers to an earlier version of the product. The case study above describes the current implementation and architecture.](../assets/testimonials/andrew-w-astutewheel.png)
+Capabilities demonstrated:
 
 - Product decisions in a mature live system
 - Evolving architecture without disrupting existing users
-- Data integrity and permission design
-- Integration and automation decisions across payments, documents, email, and spreadsheets
-- AI-enabled functionality in production
+- Integration and automation design across payments, documents, email, and spreadsheets
+- Permission and data-integrity design
 - Production reliability and troubleshooting
-- Translating business requirements into maintainable product changes
+
+![Client review (original screenshot). This testimonial refers to an earlier version of the product. The case study above describes the current implementation and architecture.](../assets/testimonials/andrew-w-astutewheel.png)
 
 ## Public portfolio note
 
