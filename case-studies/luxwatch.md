@@ -2,7 +2,7 @@
 
 **Category:** Marketplace / SaaS Product  
 **Source code:** Private  
-**Role:** Product and engineering on a two-sided luxury watch marketplace: listings, browse and search filters, seller product management, profiles, and the responsive interface.  
+**Role:** Product Engineer with end-to-end ownership of the marketplace architecture, buyer/seller workflows, data model, listing lifecycle, discovery, seller tooling, and responsive UX.  
 **Problem:** A luxury watch marketplace needs two journeys in one product: buyers discovering and contacting sellers, and sellers creating and managing their own listings.  
 **Result:** A two-sided marketplace with buyer-facing browse, search, and product pages and a seller dashboard for creating and editing listings, responsive on desktop and mobile.  
 
@@ -10,7 +10,7 @@
 
 LuxWatch is a two-sided luxury watch marketplace: buyers discover and compare listings, and sellers create and manage their own.
 
-It is a marketplace, not a product gallery. Buyers browse, search, and filter a catalog and contact sellers from a product page, while sellers work in their own area to create, edit, and publish listings with images. I worked on the product and data design behind both journeys, from listings and filters to seller product management.
+It is a marketplace, not a product gallery. Buyers browse, search, and filter a catalog and contact sellers from a product page, while sellers work in their own area to create, edit, and publish listings with images. I owned the product end to end, from the architecture and data model to the buyer and seller flows, backend logic, and responsive UX.
 
 - Buyer journey: landing page, featured watches, browse with search and filters, and product pages
 - Seller journey: a products dashboard with create, edit, publish status, and delete
@@ -46,17 +46,20 @@ No numeric results are claimed. The evidence is the shipped product itself, as s
 
 ## System & architecture
 
-The product is organized like this, based on its own navigation and screens:
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `Auth / RLS` `Vercel`
 
-- Users and roles: buyers browsing the public pages, and sellers with a profile and their own product area, with the seller shown on each listing.
-- Listings and catalog: listing records with brand, model, year, condition, price, category, description, and status.
-- Product media: up to eight images per listing, with a default image.
-- Discovery, search, and filtering: search, category, brand, condition, and price range, plus sorting.
-- Seller management: a products list with create, edit, and delete actions and a status for each listing.
-- Messaging and contact: a Contact Seller action on each product page and a Messages area for sellers.
+I owned the architecture end to end. It is organized like this, based on the product's own navigation and screens:
+
+- Application layer: Next.js and TypeScript, covering the buyer and seller flows and the backend and data logic behind them.
+- Relational data model: Supabase and PostgreSQL, holding users, listings (brand, model, year, condition, price, category, description, and status), and their images.
+- Authentication and access: Supabase Auth for accounts and row-level security (RLS) for access control.
+- Buyer and seller roles: buyers use the public pages, and sellers have a profile and their own product area, with the seller shown on each listing, a Contact Seller action on each product page, and a Messages area for sellers.
+- Catalog and listings: published listings with a status and a created date, shown in the browse catalog and on product pages.
+- Search and filtering: search, category, brand, condition, and price range, plus sorting.
+- Seller management: a products list with create, edit, and delete actions, and one form for creating and editing a listing.
+- Media and image workflows: up to eight images per listing, with a default image, added from the edit form.
 - Responsive frontend: layouts for desktop and mobile.
-
-Beyond the screens shown, the product also covers admin controls, payment-related workflows, and a transaction-oriented data model.
+- Deployment: Vercel.
 
 ![Responsive marketplace: the featured watches and a product page on mobile](../assets/luxwatch/screenshots/mobile.png)
 

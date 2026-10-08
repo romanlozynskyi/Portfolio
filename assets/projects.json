@@ -112,7 +112,7 @@
     "hasAssets": true,
     "featured": false,
     "featuredOrder": null,
-    "note": "Replaces Selected Client Systems. Screenshots are the owner-provided LuxWatch set (assets/luxwatch); the listings, prices, and seller profile are demo data. The technology stack is not confirmed, so none is shown (PROJECTS.md)."
+    "note": "Replaces Selected Client Systems. Screenshots are the owner-provided LuxWatch set (assets/luxwatch); the listings, prices, and seller profile are demo data. Stack confirmed by the owner: Next.js, TypeScript, Supabase, PostgreSQL, Supabase Auth / RLS, Vercel (PROJECTS.md)."
   },
   {
     "slug": "selected-client-systems",
