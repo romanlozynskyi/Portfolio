@@ -11,8 +11,6 @@ MetaClinic is a production-ready admin portal for a multi-clinic healthcare netw
 
 ![Admin dashboard](../assets/metaclinic/cover/dashboard.jpg)
 
-## Problem & users
-
 The users are the administrative staff of a multi-clinic healthcare network, working with different roles and permissions. The portal brings the network's operational work into one place: KPIs, client and patient records, consultation statuses, doctors and providers, and finance-related workflows.
 
 ## System & architecture
@@ -28,7 +26,7 @@ The users are the administrative staff of a multi-clinic healthcare network, wor
 ![Integrations and automations](../assets/metaclinic/screenshots/integrations.jpg)
 ![Settings](../assets/metaclinic/screenshots/settings.jpg)
 
-## What this demonstrates
+## Outcome
 
 - Internal system design for a multi-site healthcare operation
 - Role-based access and admin workflows

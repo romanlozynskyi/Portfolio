@@ -21,8 +21,6 @@ It keeps working across sources and batches until a campaign reaches the request
 
 ![Pipeline overview: sources, research, verification, enrichment, scoring, and qualified leads. The lead cards in the graphic are illustrative.](../assets/ai-lead-scout/cover/pipeline.png)
 
-## Problem & users
-
 The user is whoever runs a lead campaign and needs qualified, contactable leads. Many lead tools stop after discovery: they return companies or contact records, and the user still has to answer the questions that matter:
 
 - Is the company active and relevant to the campaign?
@@ -30,8 +28,6 @@ The user is whoever runs a lead campaign and needs qualified, contactable leads.
 - Is there a usable contact path and enough evidence to justify outreach?
 
 Universal Lead Scout moves those checks into the research pipeline.
-
-## My role & ownership
 
 I built the agent end to end. The areas I owned:
 
@@ -45,13 +41,17 @@ I built the agent end to end. The areas I owned:
 
 Evidence from a Bubble App Gallery campaign that produced 31 unique applications for enrichment.
 
-## Product decisions
+## Key product & engineering decisions
 
 - Outcome-based campaigns: the agent runs until the target of qualified leads is met, not until one search stage finishes.
 - Conservative verification: a name match alone is not enough, and weak or unsafe matches are rejected instead of passed through.
 - Cheapest reliable source first: routing prefers official APIs and direct access before browser automation, search providers, and generic scraping.
 - Cost as a routing rule: a campaign can enforce zero incremental spend or require approval before a metered provider is used.
 - Capability and cost kept separate: a source marked as technically available cannot silently be treated as free.
+
+Telling real matches from false ones. A candidate is not strong simply because a name appears to match, so the agent looks for supporting evidence such as company role, product ownership, profile history, or current activity.
+
+False identity matches are rejected instead of being silently passed through as leads. In the Bubble App Gallery campaign, 24 false identity matches were rejected during verification.
 
 ## System & architecture
 
@@ -77,12 +77,6 @@ Source routing prefers reliable, low-cost access and falls back only when needed
 5. Proven source-specific Apify Actors
 6. Generic scraping providers, only when necessary
 
-## Key challenge
-
-Telling real matches from false ones. A candidate is not strong simply because a name appears to match, so the agent looks for supporting evidence such as company role, product ownership, profile history, or current activity.
-
-False identity matches are rejected instead of being silently passed through as leads. In the Bubble App Gallery campaign, 24 false identity matches were rejected during verification.
-
 ## Validation & production quality
 
 - Automated tests cover source adapters, capability declarations, campaign behavior, cost policy, enrichment, and verification logic.
@@ -92,8 +86,6 @@ False identity matches are rejected instead of being silently passed through as 
 ## Outcome
 
 In a Bubble App Gallery campaign, 31 unique applications were enriched: 30 were confirmed active, 23 had a verified founder or owner, and 27 were classified as contactable ICP leads. The result that matters is the reduction from candidates to evidence-backed, usable leads.
-
-## What this demonstrates
 
 - Multi-source agent orchestration with outcome-based campaign logic
 - Evidence-based verification of identity and contact data

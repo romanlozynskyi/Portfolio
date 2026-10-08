@@ -11,8 +11,6 @@ Cheers is a workflow-heavy contract management product with analytics, contract 
 
 ![Contract pipeline and analytics](../assets/cheers-contracts/cover/dashboard.jpg)
 
-## Problem & users
-
 The users are teams that manage contracts and the contacts behind them. The product covers the full contract workflow: a pipeline with status tracking, a contact CRM, analytics, team management, notifications, and templates.
 
 ## System & architecture
@@ -27,7 +25,7 @@ The users are teams that manage contracts and the contacts behind them. The prod
 
 ![Mobile analytics overview](../assets/cheers-contracts/screenshots/mobile-overview.jpg)
 
-## What this demonstrates
+## Outcome
 
 - Workflow-heavy SaaS design: pipelines, statuses, and role-based access
 - Data structure design for contracts and contacts

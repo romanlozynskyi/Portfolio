@@ -12,11 +12,9 @@ Voltt is entering a rebuild phase. The work is being approached architecture-fir
 
 ![Startup diagnostic dashboard](../assets/voltt/cover/dashboard.jpg)
 
-## Problem & users
-
 The users are startup teams assessing their readiness. The product is a startup diagnostic platform, and its current version carries short-term prototype decisions that the rebuild is meant to leave behind.
 
-## Product decisions
+## Key product & engineering decisions
 
 - Architecture first: the new implementation is designed to support product growth instead of reproducing prototype shortcuts.
 

@@ -19,11 +19,7 @@ The product connects one content source to multiple support surfaces such as a h
 
 ![Published help center](../assets/helpview/cover/help-center.png)
 
-## Problem & users
-
 The users are teams that write their documentation in Notion and need to give customers a real help center, along with the customers who search it. The product has to cover publishing, search, branding, and measuring what customers cannot find.
-
-## My role & ownership
 
 I worked on the product as an engineer on the full SaaS, not only the page layer. The areas I owned:
 
@@ -39,13 +35,17 @@ What the product delivers, visible in the live product at helpview.so: three cus
 
 ![Dashboard and search analytics](../assets/helpview/screenshots/dashboard.png)
 
-## Product decisions
+## Key product & engineering decisions
 
 - Notion stays the editing source: teams keep writing where they already write, and Helpview handles the customer-facing side.
 - One content model, many surfaces: the same content feeds the help center, documentation, and the embedded widget.
 - Analytics close the loop: search behavior, zero-result searches, and content gaps feed back into improving the documentation.
 
 ![Theme and brand customization](../assets/helpview/screenshots/customization.png)
+
+Coordinating one content source across several surfaces. The product requires coordination across content synchronization, data structure, publishing state, search, theming, permissions, custom domains, analytics, and an embedded support experience.
+
+![Publish Notion pages as customer-facing help content](../assets/helpview/screenshots/articles.png)
 
 ## System & architecture
 
@@ -63,17 +63,9 @@ Notion stays the editing source, and search behavior and analytics feed back int
 
 ![Notion sync settings](../assets/helpview/screenshots/settings-sync.png)
 
-## Key challenge
-
-Coordinating one content source across several surfaces. The product requires coordination across content synchronization, data structure, publishing state, search, theming, permissions, custom domains, analytics, and an embedded support experience.
-
-![Publish Notion pages as customer-facing help content](../assets/helpview/screenshots/articles.png)
-
 ## Outcome
 
 Helpview is live at helpview.so. One Notion content source becomes three customer-facing surfaces through a three-step publishing flow that stays synced with Notion, and search with zero-result analytics shows teams where their documentation has gaps.
-
-## What this demonstrates
 
 - Content architecture: one Notion content source published to a help center, documentation, and an embedded widget
 - Search and discovery: a searchable help center with zero-result analytics

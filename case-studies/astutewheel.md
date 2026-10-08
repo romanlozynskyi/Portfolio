@@ -19,8 +19,6 @@ It runs on Next.js, TypeScript, Supabase, and PostgreSQL. My work spans architec
 
 ![AstuteWheel Scope of Advice](../assets/astutewheel/cover/scope-of-advice.png)
 
-## Problem & users
-
 The platform serves financial advice practices: client engagement, advice delivery, and practice management run on one system. A product at this stage cannot be paused or rebuilt from scratch, so it has to keep evolving while customers keep working:
 
 - Complex customer workflows and financial logic must keep behaving the same way.
@@ -28,8 +26,6 @@ The platform serves financial advice practices: client engagement, advice delive
 - New functionality has to fit established workflows instead of disrupting them.
 
 ![Client wellbeing and financial planning](../assets/astutewheel/screenshots/wellbeing.png)
-
-## My role & ownership
 
 I am the Senior Product Engineer responsible for evolving the product. The areas I own:
 
@@ -49,7 +45,7 @@ Outcomes for the product, and the engineering evidence behind them.
 
 AstuteWheel is a live, mature financial-planning SaaS and CRM with connected workflows across financial planning, CRM, reporting, payments, documents, and automation. Production permissions, relational data, reporting, automation, and troubleshooting are part of everyday delivery, and the stack and integrations behind them are described under System & architecture.
 
-## Product decisions
+## Key product & engineering decisions
 
 - Evolve, do not rewrite: improvements ship inside the live system without disrupting existing users, so each change is judged by what it could break as well as what it adds.
 - Established workflows first: new functionality is balanced against the workflows customers already depend on.
@@ -58,6 +54,11 @@ AstuteWheel is a live, mature financial-planning SaaS and CRM with connected wor
 - Integrations chosen for the job: Stripe for payments, DocuSign for documents, SendGrid for email, Airtable and Google Sheets for data exchange, and Zapier, Make, and n8n for automation.
 - AI where it adds value: OpenAI/ChatGPT powers AI-enabled functionality inside the product.
 - Requirements into maintainable changes: business requirements are translated into product changes that stay maintainable in a large system.
+
+Evolving a large live platform without disrupting the people using it. With 120k+ active users, years of accumulated workflows and data relationships, and integrations that touch payments, documents, and email, each change has to preserve established behavior, keep data consistent, and stay reliable in production.
+
+![Complex data modeling: position detail](../assets/astutewheel/screenshots/position-detail.png)
+![Client record detail](../assets/astutewheel/screenshots/personal-detail.png)
 
 ## System & architecture
 
@@ -69,13 +70,6 @@ AstuteWheel is a live, mature financial-planning SaaS and CRM with connected wor
 - Product areas: financial planning, CRM operations, reporting and dashboards, billing logic, documents, and admin workflows.
 
 The exact production implementation and credentials remain private.
-
-## Key challenge
-
-Evolving a large live platform without disrupting the people using it. With 120k+ active users, years of accumulated workflows and data relationships, and integrations that touch payments, documents, and email, each change has to preserve established behavior, keep data consistent, and stay reliable in production.
-
-![Complex data modeling: position detail](../assets/astutewheel/screenshots/position-detail.png)
-![Client record detail](../assets/astutewheel/screenshots/personal-detail.png)
 
 ## Validation & production quality
 
@@ -95,8 +89,6 @@ AstuteWheel is a mature live financial platform serving 120k+ active users acros
 Andrew W., verified client
 
 ![Client review (original screenshot). This testimonial refers to an earlier version of the product. The case study above describes the current implementation and architecture.](../assets/testimonials/andrew-w-astutewheel.png)
-
-## What this demonstrates
 
 - Product decisions in a mature live system
 - Evolving architecture without disrupting existing users

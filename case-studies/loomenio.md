@@ -22,8 +22,6 @@ The product is built around one idea: the application should help a maker unders
 
 ![Today, the operational recommendation view](../assets/loomenio/cover/today.png)
 
-## Problem & users
-
 The users are small-batch makers and manufacturers, working in shared workspaces with different roles. Their inventory, recipes, supplier prices, and production usually live in separate spreadsheets, email threads, and memory. Each number is real, but none of them talk to each other, so the next action is never obvious.
 
 The product therefore had to do three things:
@@ -31,8 +29,6 @@ The product therefore had to do three things:
 - Capture operational data without slow, error-prone manual entry.
 - Show the next operational priority without a manual review of spreadsheets.
 - Keep inventory, costing, and permissions correct and auditable.
-
-## My role & ownership
 
 I designed and built the product end to end. The areas I owned:
 
@@ -47,7 +43,7 @@ I designed and built the product end to end. The areas I owned:
 
 Outcomes for the product, and the AI and engineering evidence behind them.
 
-## Product decisions
+## Key product & engineering decisions
 
 - Controlled AI: AI interprets user input and explains system output. Inventory, costing, permissions, and production decisions stay deterministic and auditable.
 - Explicit confirmation: the user confirms a structured proposal before any change is applied, and ambiguity goes to review instead of being guessed.
@@ -57,21 +53,6 @@ Outcomes for the product, and the AI and engineering evidence behind them.
 - Review over silent fixes: unclear or mismatched units are routed to review instead of silently applying bad quantities.
 
 ![Sales and reversals](../assets/loomenio/screenshots/sales.png)
-
-## System & architecture
-
-Loomenio is a multi-workspace SaaS application.
-
-`Next.js` `TypeScript` `Supabase` `PostgreSQL` `RLS` `Vercel`
-
-- Application: a Next.js application with services for inventory transactions, production and recipes, orders and suppliers, external integrations, notifications, Today recommendations, and AI Capture.
-- Data: Supabase and PostgreSQL, with row-level security enforcing workspace isolation.
-- Validation boundary: critical operations are validated in the application and the database, not delegated to AI.
-- Product areas: materials and SKUs, products and recipes, production workflows, sales and reversals, inventory transaction history, suppliers and purchase orders, CSV import, notifications, external integrations, and operational recommendations.
-
-![Products and recipes](../assets/loomenio/screenshots/products.png)
-
-## Key challenge
 
 Real input is messy, while inventory and costing must stay exact. AI Capture turns messy user input into structured operational drafts that can be reviewed before they are applied.
 
@@ -87,6 +68,19 @@ AI interprets the input. Database updates and business rules stay under determin
 
 ![AI-assisted data capture](../assets/loomenio/screenshots/ai-capture.png)
 
+## System & architecture
+
+Loomenio is a multi-workspace SaaS application.
+
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `RLS` `Vercel`
+
+- Application: a Next.js application with services for inventory transactions, production and recipes, orders and suppliers, external integrations, notifications, Today recommendations, and AI Capture.
+- Data: Supabase and PostgreSQL, with row-level security enforcing workspace isolation.
+- Validation boundary: critical operations are validated in the application and the database, not delegated to AI.
+- Product areas: materials and SKUs, products and recipes, production workflows, sales and reversals, inventory transaction history, suppliers and purchase orders, CSV import, notifications, external integrations, and operational recommendations.
+
+![Products and recipes](../assets/loomenio/screenshots/products.png)
+
 ## Validation & production quality
 
 - Live evaluation: an 85-case evaluation set reached 98.6% operation-type accuracy, with 100% entity accuracy for auto-filled entities.
@@ -100,8 +94,6 @@ AI interprets the input. Database updates and business rules stay under determin
 ## Outcome
 
 Loomenio is live as a production product. It delivers 50% faster operational data capture, 30% fewer manual corrections, and under a minute to identify the next operational priority. The AI workflow reached 98.6% operation-type accuracy in live evaluation while business-critical logic stays deterministic, and the product is covered by 1,491 automated tests.
-
-## What this demonstrates
 
 - End-to-end product ownership: from problem framing and data model to AI workflows and the responsive interface.
 - Production SaaS architecture: a multi-workspace model, application services, and a validated data layer.

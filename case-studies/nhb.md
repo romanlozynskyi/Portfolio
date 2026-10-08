@@ -20,11 +20,7 @@ I worked on NHB for around a year, brought in for the systems-level engineering 
 
 ![NHB Home dashboard](../assets/nhb/cover/home-dashboard.png)
 
-## Problem & users
-
 The users are entrepreneurs who join as members, from free community access up to paid plans, and the coaches who run programs for them. The platform faced a scaling push and the problems that come with it: heavy capacity drains, shared accounts, geographic restrictions, and subscription records that had to match the database.
-
-## My role & ownership
 
 The engagement covered:
 
@@ -42,12 +38,14 @@ The platform's reach and breadth lead the evidence: a large community, many apps
 
 ![Client review (original screenshot). This testimonial refers to an earlier version of the product. The case study above describes the current implementation and architecture.](../assets/testimonials/max-iver-nhb.png)
 
-## Product decisions
+## Key product & engineering decisions
 
 - Account sharing: a Netflix-style prevention system, with device fingerprinting, IP/geo signals, and session limits evaluated before choosing an approach.
 - Geo-blocking in the application: infrastructure-level blocking was not an option, so it was built into the application itself, including IP country detection and a configuration that can change without a redeploy.
 - Billing reconciliation: a tool that parsed subscription records, cross-checked them against the database, and flagged only genuine mismatches for review, with safety checks against accidental cancellations.
 - Root cause over symptoms: problems were debugged to their cause rather than patched.
+
+Preparing a live platform for a scaling push. The engagement began with a performance audit of the live app to identify the heaviest capacity drains before scaling.
 
 ## System & architecture
 
@@ -65,10 +63,6 @@ The platform is built on Next.js and TypeScript with Supabase and PostgreSQL, an
 ![Community forums](../assets/nhb/screenshots/forums.png)
 ![Login and membership entry](../assets/nhb/screenshots/login.png)
 
-## Key challenge
-
-Preparing a live platform for a scaling push. The engagement began with a performance audit of the live app to identify the heaviest capacity drains before scaling.
-
 ## Validation & production quality
 
 - The billing reconciliation tool cross-checks subscription records against the database and includes safety checks against accidental cancellations.
@@ -84,8 +78,6 @@ NHB is a unified, multi-surface growth and community platform: 23 apps in one pl
 > "Roman is reliable, he thinks things through, and he's genuinely strong on the architecture side."
 
 Max Iver, Head of Design at Nothing Held Back
-
-## What this demonstrates
 
 - A unified, multi-surface growth and community platform: library, resources, forums, live sessions, and membership tiers in one product
 - Platform scale: 48,495+ community members and 23 apps in one platform
