@@ -13,7 +13,9 @@
 
 AI Sleep Assistant is a responsive AI chat product built for a sleep consulting business.
 
-The client already had a GPT-based sleep assistant, used mainly by parents asking about a child's sleep, but no product around it. I built the application from scratch and delivered it live as a customer-facing product with free and paid access. I owned the full scope: a mobile-first chat interface, signup and login, the OpenAI integration, Stripe subscriptions with account and billing screens, an embeddable chat widget for the client's own website, admin access for user management, and handover documentation.
+I owned this product end to end: built from scratch and delivered live, from scope and architecture to integrations, testing, launch, and handover.
+
+The client already had a GPT-based sleep assistant, used mainly by parents asking about a child's sleep, but no product around it. The scope covered a mobile-first chat interface, signup and login, the OpenAI integration, Stripe subscriptions with account and billing screens, an embeddable chat widget for the client's own website, admin access for user management, and handover documentation.
 
 ![Chat interface. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/cover/chat.png)
 
@@ -37,11 +39,11 @@ The client left a 5-star review (5.0).
 
 ## Key product & engineering decisions
 
-- Free mode first: users open the app and start chatting immediately, sign up only when they want paid features, then go straight to plan selection and Stripe checkout.
-- Assistant logic stays with the client: the app passes each message and the user's free or paid status to the client's GPT, which handles the sleep guidance, and holds no sleep logic of its own.
-- Subscription state follows payment: Stripe webhooks drive the account status, so it updates the same way whether checkout started in the main app or elsewhere.
-- Chat reliability: the chat handles an active assistant run and several messages sent in quick succession.
-- One chat core, two surfaces: the full-page chat and the embeddable widget share the same chat core, while authentication and subscriptions stay in the main app.
+- Free mode first: chat starts with no signup. Accounts and checkout come only when paid features are needed.
+- Assistant logic stays with the client: the app sends each message and the free or paid status to the client's GPT. No sleep logic lives in the app.
+- Subscription state follows payment: Stripe webhooks set the account status, so it stays correct wherever checkout starts.
+- Chat reliability: an active assistant run and several quick messages are handled without breaking the chat.
+- One chat core, two surfaces: the full-page chat and the widget share one core, while auth and billing stay in the main app.
 
 ![Free and paid plans. Presentation mockup, not a capture of the live app.](../assets/ai-sleep-assistant/screenshots/pricing.png)
 
@@ -53,21 +55,21 @@ The current implementation is built on the stack above and coordinates these lay
 
 - Application: Next.js and TypeScript.
 - Data: Supabase and PostgreSQL.
-- AI layer: the OpenAI API produces the assistant's responses; each request carries the user's message and free or paid status.
-- Billing: Stripe checkout and subscriptions, with webhooks keeping the account status in sync with payment.
-- Access: signup and login, guest access in free mode, and free, paid, and gift access states.
-- Distribution: a reusable chat core serving the full-page chat and the embeddable widget.
+- AI layer: the OpenAI API answers; each request carries the message and the free or paid status.
+- Billing: Stripe checkout and subscriptions, with webhooks syncing the account status to payment.
+- Access: signup and login, guest mode, and free, paid, and gift states.
+- Distribution: one reusable chat core for the full-page chat and the widget.
 - Administration: admin access for user management.
 
 History: the first version of the app was built on Bubble. That is legacy context only, not part of the current stack.
 
 ## Validation & production quality
 
-- End-to-end testing: the application was deployed live after testing the full flow.
-- Fixes during testing: issues found were fixed quickly, as the client noted in the review.
-- Payment correctness: webhook-driven status keeps the paid or free state consistent regardless of where checkout starts.
-- Concurrency handling: the chat copes with an active assistant run and multiple quick messages.
-- Handover: documentation and a Loom walkthrough were delivered so the client can manage updates going forward.
+- End-to-end testing: the full flow was tested before the live launch.
+- Fixes during testing: issues were fixed quickly, as the client noted in the review.
+- Payment correctness: webhook-driven status keeps the paid and free states consistent.
+- Concurrency handling: active assistant runs and quick successive messages are handled.
+- Handover: documentation and a Loom walkthrough let the client manage updates.
 
 ## Outcome
 
