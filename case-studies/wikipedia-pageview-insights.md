@@ -7,81 +7,75 @@
 **Role:** Built the Agent Skill end to end: topic resolution, data fetching, analysis, charts, PDF reporting, tests, and live validation.  
 **Problem:** Founders need a verifiable way to read Wikipedia pageviews as a proxy for public interest across topics, periods, and language editions, without leaving the math to the model.  
 **Result:** A standalone skill with one CLI command, 160 passing tests, and a full flow validated live on Claude Haiku 4.5.  
-**Metric:** 160 | automated tests, all passing | evidence  
-**Metric:** 5 | live validation scenarios on Claude Haiku 4.5 | evidence  
-**Metric:** ~67k | tokens for the full five-message validation run | evidence  
+**Metric:** 160 | automated tests, all passing | evidence | Wikimedia responses are mocked, so the suite needs no network, and a couple of tests hit the live API
+**Metric:** 3.11 to 3.14 | supported Python versions | evidence | Pinned dependencies with prebuilt wheels, tested clean on 3.12 and 3.14
+**Metric:** 5 | live validation scenarios on Claude Haiku 4.5 | evidence | A small, inexpensive model drove the full flow on real Wikidata, Wikipedia, and Wikimedia data
+**Metric:** ~67k | tokens for the full five-message validation run | evidence | Ten tool calls for all five messages, so the flow stays cheap to run
 
 ## Overview
 
-Wikipedia Pageview Insights is a standalone Agent Skill that helps founders read Wikipedia pageview data as a proxy for public interest in a topic.
+Wikipedia Pageview Insights is a self-contained agent skill for source-grounded research with official Wikimedia and Wikidata data: it resolves topics to the right articles, fetches and caches pageviews, analyzes trends in code, produces charts and a PDF report, and fails safely when data cannot be retrieved.
 
-It compares interest across time periods and language editions to decide which topics or audiences deserve a closer look, and was built as a technical case for the Genesis AI Product Engineering School.
+It helps founders compare interest across periods and language editions without leaving the math to the model, and was built as a technical case for the Genesis AI Product Engineering School. I built it end to end.
+
+- Topic resolution across language editions, with ambiguity returned to the user
+- Fetching from the official Wikimedia APIs, with caching and a relay for blocked networks
+- Trend and growth analysis against user-defined criteria, then charts and a one-page PDF
+- The test suite and the live validation on a small, inexpensive model
 
 ![Overview graphic: inputs, the five-step pipeline from resolve to report, and the outputs. The figures in the graphic are illustrative.](../assets/wikipedia-pageview-insights/cover/cover.png)
 
-The users are founders deciding which topics or language audiences deserve further research. Pageviews are only a proxy for interest, never evidence of willingness to pay, so a useful analysis has to be measurable and honest about its limits:
-
-- Numbers and trend labels must come from code, not from the model.
-- Each topic must resolve to the correct article in every language edition.
-- Measured data, limitations, and interpretation must stay clearly separated.
-
-I built the skill end to end. The areas I owned:
-
-- Topic resolution across language editions
-- Data fetching from the Wikimedia APIs, with caching and a fallback for blocked networks
-- Trend and growth analysis, and the user-defined criteria for what counts as promising
-- Charts and the one-page PDF report
-- The test suite and the live validation on a small, inexpensive model
-
 ## Product outcomes & evidence
 
-Evidence for the skill's reliability and efficiency.
+Evidence for reliability, reproducibility, and source grounding, rather than output counts. An independent recomputation of a live series matched the skill's growth, slope, R squared, and total views exactly.
 
 ## Key product & engineering decisions
 
-- Logic lives in code, not prompts: title resolution, trend and growth math, ranking, and the report text are deterministic functions with unit tests. The model only reads computed fields.
-- Honest by construction: trend strength is documented as a fit-quality heuristic, not a significance test, and a series with too little data is reported as insufficient data, never as a decline.
-- Ambiguity is never guessed: an ambiguous topic returns its candidates, and the user picks.
-- Fallback for blocked networks: a relay mode lets the agent fetch the exact official API URLs with its own tools and hand the raw responses back, instead of failing or inventing data.
-- Reuse over refetching: an exact-key disk cache makes follow-up requests cheap, and the in-progress month is never analyzed.
-
-Making a small, inexpensive model use the skill honestly. In live testing on Claude Haiku 4.5, the model did slip: it stated numbers it had computed itself and guessed at causes. Real failures like these shaped the design: a ranking bug, an encoding bug, invented causal claims, and a proxy-detection gap were each fixed and locked in with a regression test.
-
-The answer was to move more work into code, so the model reads computed fields and cannot misstate them: pre-sorted comparisons, pre-written factual narrative sentences, and an intent flag that adds the proxy caveat automatically.
+- Official sources only: all data comes from the official Wikimedia Pageviews API and Wikidata, so every figure traces back to those responses.
+- Deterministic analysis before interpretation: title resolution, trend and growth math, ranking, and the report text are deterministic functions with unit tests, and the model only reads computed fields. A series with too little data is reported as insufficient data, never as a decline.
+- Caching and reproducibility: an exact-key disk cache makes follow-up requests cheap, the in-progress month is never analyzed, and pinned dependencies keep the environment reproducible.
+- Explicit needs_data for blocked networks: when Python cannot reach Wikimedia, the run returns needs_data with the exact official API URLs for the agent to open with its own tools and hand back, instead of failing.
+- No invented data when access fails: handed-back responses are checked and rejected if they do not match the request, and if a URL cannot be opened the agent stops and tells the user rather than working around it.
 
 ## System & architecture
 
-One command runs a five-step pipeline:
-
-1. Resolve: find the correct article for each topic in each language edition through Wikidata, and ask the user to choose when a topic is ambiguous.
-2. Fetch: get monthly or daily pageview data from the official Wikimedia APIs, with exact-key caching.
-3. Analyze: compute totals, averages, growth, trend fit, and a trend-strength label in code, then judge each series against the user's own criteria.
-4. Chart: render the series as a chart.
-5. Report: write a one-page PDF and the full JSON result.
-
 `Python` `Wikimedia API` `Wikidata` `NumPy` `Matplotlib` `ReportLab` `pytest`
 
-A single CLI coordinates separate modules for resolution, fetching, analysis, charts, and reporting. SKILL.md tells the agent how to drive the CLI and how to read its JSON. The data comes from the official Wikimedia Pageviews API and Wikidata, and pageview history starts in July 2015.
+One CLI command runs a six-step pipeline:
+
+1. Resolve: find the correct article for each topic in each language edition through Wikidata, and ask the user to choose when a topic is ambiguous.
+2. Fetch: get monthly or daily pageview data from the official Wikimedia APIs, with back-off on 429 and 5xx errors. Pageview history starts in July 2015.
+3. Cache: keep each series under an exact key, and never cache a series that ends in the current period.
+4. Analyze: compute totals, averages, growth, trend fit, and a trend-strength label in code, then judge each series against the user's own criteria.
+5. Chart: render the series as a chart.
+6. Report: write a one-page PDF and the full JSON result.
+
+The CLI contract is small. A single command coordinates separate modules for resolution, fetching, analysis, charts, and reporting. Its JSON result carries a status (ok, needs_disambiguation, needs_data, or error), the computed fields, and a limitations array. SKILL.md tells the agent how to drive the CLI and how to read that JSON.
 
 ![Chart generated by the skill from live Wikimedia data: Artificial intelligence in five language editions, October 2024 to September 2026.](../assets/wikipedia-pageview-insights/screenshots/chart.png)
 ![One-page PDF report from the same run: measured data, limitations, and interpretation.](../assets/wikipedia-pageview-insights/screenshots/report.png)
 
 ## Validation & production quality
 
-- 160 automated tests, all passing. Wikimedia responses are mocked, and a couple of tests hit the live API.
-- A live run of the full flow on Claude Haiku 4.5 across five user scenarios, using real Wikidata, Wikipedia, and Wikimedia data.
-- An independent recomputation of a live series matched the skill's growth, slope, R squared, and total views exactly.
-- Regression tests lock in each real failure found during testing.
-- Requests back off on 429 and 5xx errors, and the relay path covers environments where Wikimedia is blocked.
+- Test coverage: 160 automated tests, all passing, with Wikimedia responses mocked and a couple of tests hitting the live API.
+- Reproducible environment: dependency pins, Python 3.11 to 3.14 support, tested clean on 3.12 and 3.14, and a clean-install smoke test.
+- Live validation: the full flow ran on Claude Haiku 4.5 across five user scenarios on real data, and an independent recomputation of a live series matched growth, slope, R squared, and total views exactly.
+- Blocked-network behavior: the needs_data relay was driven end to end by Haiku 4.5, and each number matched a direct, unblocked run exactly.
+- Partial months and date alignment: monthly requests snap to whole months, and the in-progress month is excluded and noted in limitations, so a partial month is never analyzed as a full one.
+- PDF and font fallback: DejaVu Sans is bundled, CJK text uses an installed system CJK font, and only if none covers a character does it fall back to built-in CID fonts.
+- Regression tests: each real failure found in testing (a ranking bug, an encoding bug, invented causal claims, a proxy-detection gap) is locked in with a test.
 
 ## Outcome
 
-A standalone Agent Skill that turns a plain question about interest in a topic into a verified analysis: measured data first, limitations before any recommendation, and a chart, a one-page PDF, and the full JSON as outputs. The five-message validation run took 10 tool calls and about 67k tokens.
+Wikipedia Pageview Insights turns a plain question about interest in a topic into a verified, source-grounded analysis, with a chart, a one-page PDF, and the full JSON, and it stops safely instead of guessing when data or identity cannot be established.
 
-- Product thinking for agents: deterministic code for facts, the model for conversation
-- Honest data products that separate measurement, limitations, and interpretation
-- Data pipeline engineering: resolution, fetching, caching, analysis, charts, and reports
-- Evaluation discipline: live validation on a small model and regression tests for real failures
+Capabilities demonstrated:
+
+- Reliable agent and tool engineering around a single CLI and JSON contract
+- Source grounding in official data only
+- Deterministic boundaries: code for facts, the model for conversation
+- Reproducibility: pinned dependencies, clean-install tests, and cross-checked live runs
+- Graceful failure: explicit needs_data, ambiguity returned to the user, no invented numbers
 
 ## Public portfolio note
 
