@@ -106,12 +106,22 @@
     "note": "Rebuild in progress. New diagnostic-dashboard screenshot added; demo tenant data (Alex Chen / NovaTech) throughout."
   },
   {
+    "slug": "luxwatch",
+    "name": "LuxWatch",
+    "caseStudyPath": "case-studies/luxwatch.md",
+    "hasAssets": true,
+    "featured": false,
+    "featuredOrder": null,
+    "note": "Replaces Selected Client Systems. Screenshots are the owner-provided LuxWatch set (assets/luxwatch); the listings, prices, and seller profile are demo data. The technology stack is not confirmed, so none is shown (PROJECTS.md)."
+  },
+  {
     "slug": "selected-client-systems",
     "name": "Selected Client Systems",
     "caseStudyPath": "case-studies/selected-client-systems.md",
     "hasAssets": true,
     "featured": false,
     "featuredOrder": null,
-    "note": "Bundles remaining sub-projects: Education & Impact Platform (assets/instrumento, cover confirmed), Luxury Watch Marketplace (no screenshots yet), and SaaS Architecture Rescue (service description, no screenshots). Healthcare Admin Portal and Contract Management SaaS were split out into their own case studies (metaclinic, cheers-contracts)."
+    "note": "Not published: replaced by luxwatch. The Education & Impact Platform and SaaS Architecture Rescue sub-projects are no longer public. The case file and assets are kept; set published to true to show it again.",
+    "published": false
   }
 ]

@@ -18,7 +18,7 @@ Order follows [`../assets/projects.json`](../assets/projects.json), the canonica
 Not featured, but published and browsable by category.
 
 - [Selected Local Business Websites](./selected-websites.md)
-- [Selected Client Systems](./selected-client-systems.md)
+- [LuxWatch](./luxwatch.md)
 - [MetaClinic](./metaclinic.md)
 - [Cheers](./cheers-contracts.md)
 - [Voltt](./voltt.md)
