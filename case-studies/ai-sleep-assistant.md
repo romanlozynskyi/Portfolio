@@ -46,7 +46,7 @@ The client later confirmed that the live app, the Bubble setup, and the Stripe f
 
 > "He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant."
 
-![Client review of the project, original screenshot.](../assets/testimonials/upwork-review-01-full.png)
+![Client review of the project. Original screenshot, with the project title row cropped.](../assets/testimonials/upwork-review-01-clean.png)
 
 ## Product decisions
 
