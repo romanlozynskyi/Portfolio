@@ -54,10 +54,11 @@
       "Detail Oriented",
       "Professional"
     ],
-    "clientName": null,
+    "clientName": "Kim Rogers",
     "image": "upwork-review-01-full.png",
     "featured": true,
-    "featuredOrder": 3
+    "featuredOrder": 3,
+    "clientTitle": "Founder"
   },
   {
     "id": "upwork-review-02-maintenance",
