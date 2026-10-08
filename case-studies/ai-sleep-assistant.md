@@ -47,15 +47,19 @@ The client left a 5-star review (5.0).
 
 ## System & architecture
 
-`OpenAI API` `Stripe` `Webhooks` `Embeddable widget`
+`Next.js` `TypeScript` `Supabase` `PostgreSQL` `OpenAI API` `Stripe`
 
-The application layer is built on Bubble. Around it, the app coordinates these services and access states:
+The current implementation is built on the stack above and coordinates these layers and access states:
 
+- Application: Next.js and TypeScript.
+- Data: Supabase and PostgreSQL.
 - AI layer: the OpenAI API produces the assistant's responses; each request carries the user's message and free or paid status.
 - Billing: Stripe checkout and subscriptions, with webhooks keeping the account status in sync with payment.
 - Access: signup and login, guest access in free mode, and free, paid, and gift access states.
 - Distribution: a reusable chat core serving the full-page chat and the embeddable widget.
 - Administration: admin access for user management.
+
+History: the first version of the app was built on Bubble. That is legacy context only, not part of the current stack.
 
 ## Validation & production quality
 
