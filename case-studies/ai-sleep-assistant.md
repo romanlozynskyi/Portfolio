@@ -6,7 +6,7 @@
 **Work period:** Nov 2025 to Jan 2026  
 **Role:** Built the app from scratch and delivered it live: chat interface, OpenAI and Stripe integration, WordPress widget, admin access, and documentation.  
 **Problem:** A sleep consulting business needed its existing GPT-based assistant turned into a customer-facing product with free and paid access.  
-**Result:** Delivered live after end-to-end testing. The client confirmed the app, Bubble setup, and Stripe flow worked well and left a 5-star review.  
+**Result:** Delivered live after end-to-end testing. The client confirmed the app and the Stripe flow worked well and left a 5-star review.  
 **Metric:** 5.0 | Client rating  
 
 ## Overview
@@ -42,9 +42,9 @@ I built the application from scratch and delivered it as a live client applicati
 
 ## Product outcomes & evidence
 
-The client later confirmed that the live app, the Bubble setup, and the Stripe flow were working well, and left a 5-star review.
+The client later confirmed that the live app and the Stripe flow were working well, and left a 5-star review.
 
-> "He built and deployed my Bubble app, set up Stripe subscriptions, and integrated my OpenAI assistant."
+> "He communicated clearly throughout, and fixed issues quickly during testing."
 
 ![Client review of the project. Original screenshot, with the project title row cropped.](../assets/testimonials/upwork-review-01-clean.png)
 
@@ -58,9 +58,9 @@ The client later confirmed that the live app, the Bubble setup, and the Stripe f
 
 ## System & architecture
 
-`Bubble` `OpenAI API` `Stripe` `WordPress`
+`OpenAI API` `Stripe` `WordPress`
 
-The app coordinates three external layers:
+The application layer is built on Bubble. Around it, the app coordinates three external layers:
 
 - OpenAI for the assistant's responses
 - Stripe for payment and subscription state
@@ -83,7 +83,7 @@ The public experience was designed to remove friction:
 ## Validation & production quality
 
 - The application was deployed live after end-to-end testing.
-- The client confirmed that the live app, the Bubble setup, and the Stripe flow were working well.
+- The client confirmed that the live app and the Stripe flow were working well.
 - Documentation and a Loom walkthrough were handed over so the client can manage updates going forward.
 
 ## Outcome
