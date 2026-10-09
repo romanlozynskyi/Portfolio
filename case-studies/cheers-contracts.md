@@ -20,7 +20,7 @@ Its users are teams that manage contracts and the contacts behind them, where wo
 
 ## Product outcomes & evidence
 
-No numeric results are claimed. The evidence is the shipped product itself, as shown in its own screens.
+The shipped product includes:
 
 - Contract pipeline: contracts are tracked through statuses such as draft, sent, active, and signed, with a summary of total, active, and soon-to-end contracts.
 - Contract analytics: the portfolio is broken down by contract type, from client and services agreements to NDAs and statements of work.

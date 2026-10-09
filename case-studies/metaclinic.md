@@ -21,7 +21,7 @@ Its users are the administrative staff of the network, working with different ro
 
 ## Product outcomes & evidence
 
-No numeric results are claimed. The evidence is the shipped product itself, as shown in its own screens.
+The shipped product includes:
 
 - Clinic operations: a dashboard with totals for clinics, active doctors, patients, and revenue.
 - Records: modules for clinics, doctors, patients, and consultations.

@@ -22,11 +22,11 @@ It is for startup teams that assess their readiness and decide what to do next. 
 
 ## Product outcomes & evidence
 
-No traction or metrics are claimed, and planned work is not presented as shipped. The evidence is grouped by status.
+Evidence is grouped by current implementation status.
 
 - Implemented: an early diagnostic dashboard with an overall startup score, diagnostic dimensions, top red flags, a 7/30/90-day roadmap, priority next actions, an evidence tracker, and an AI coach panel. It is shown with demo data.
 - Architected and defined: the startup diagnostic workflow, structured project context (Project Facts), deterministic diagnostics and scoring, the 7/30/90 roadmap logic, a shared account and project architecture, the Core and Sprint flows, and production acceptance requirements.
-- Planned: the rest of the rebuild, including payments and entitlements, async jobs and report generation, and production acceptance testing, none of which is presented as shipped.
+- Planned: the rest of the rebuild, including payments and entitlements, async jobs and report generation, and production acceptance testing.
 
 ## Key product & engineering decisions
 
@@ -55,7 +55,7 @@ The confirmed architecture for the rebuild is organized like this:
 
 ## Validation & production quality
 
-No acceptance-test results are claimed. These controls are labeled as designed or required until they are verified in the running product.
+These controls are labeled as designed or required until verified in the running product.
 
 - Idempotent payment and webhook handling: required, so a repeated webhook or a duplicate payment cannot grant access twice.
 - Authorization and RLS boundaries: designed, so access is enforced in the database through row-level security as well as in the application.

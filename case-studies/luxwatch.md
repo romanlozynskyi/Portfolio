@@ -22,7 +22,7 @@ It is a marketplace, not a product gallery. Buyers browse, search, and filter a 
 
 ## Product outcomes & evidence
 
-No numeric results are claimed. The evidence is the shipped product itself, as shown in its own screens.
+The shipped product includes:
 
 - Landing and discovery: a landing page with Explore Collection and Start Selling entry points, and a featured watches carousel.
 - Browse, search, and filters: search, category, brand, condition, and price range filters, with sorting such as Newest First.
