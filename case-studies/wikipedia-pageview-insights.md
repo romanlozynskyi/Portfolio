@@ -10,7 +10,6 @@
 **Metric:** 160 | automated tests, all passing | evidence | Wikimedia responses are mocked, so the suite needs no network, and a couple of tests hit the live API
 **Metric:** 3.11 to 3.14 | supported Python versions | evidence | Pinned dependencies with prebuilt wheels, tested clean on 3.12 and 3.14
 **Metric:** 5 | live validation scenarios on Claude Haiku 4.5 | evidence | A small, inexpensive model drove the full flow on real Wikidata, Wikipedia, and Wikimedia data
-**Metric:** ~67k | tokens for the full five-message validation run | evidence | Ten tool calls for all five messages, so the flow stays cheap to run
 
 ## Overview
 
@@ -59,7 +58,7 @@ The CLI contract is small. A single command coordinates separate modules for res
 
 - Test coverage: 160 automated tests, all passing, with Wikimedia responses mocked and a couple of tests hitting the live API.
 - Reproducible environment: dependency pins, Python 3.11 to 3.14 support, tested clean on 3.12 and 3.14, and a clean-install smoke test.
-- Live validation: the full flow ran on Claude Haiku 4.5 across five user scenarios on real data, and an independent recomputation of a live series matched growth, slope, R squared, and total views exactly.
+- Live validation: the full flow ran on Claude Haiku 4.5 across five user scenarios on real data, and an independent recomputation of a live series matched growth, slope, R squared, and total views exactly. The five-message run took ten tool calls and about 67k tokens in total.
 - Blocked-network behavior: the needs_data relay was driven end to end by Haiku 4.5, and each number matched a direct, unblocked run exactly.
 - Partial months and date alignment: monthly requests snap to whole months, and the in-progress month is excluded and noted in limitations, so a partial month is never analyzed as a full one.
 - PDF and font fallback: DejaVu Sans is bundled, CJK text uses an installed system CJK font, and only if none covers a character does it fall back to built-in CID fonts.

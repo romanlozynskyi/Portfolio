@@ -61,8 +61,6 @@ The current implementation is built on the stack above and coordinates these lay
 - Distribution: one reusable chat core for the full-page chat and the widget.
 - Administration: admin access for user management.
 
-History: the first version of the app was built on Bubble. That is legacy context only, not part of the current stack.
-
 ## Validation & production quality
 
 - End-to-end testing: the full flow was tested before the live launch.
